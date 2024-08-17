@@ -6,8 +6,7 @@ public class BasicControls: MonoBehaviour
 {
     new Rigidbody2D rigidbody2D;
 
-    [SerializeField]
-    float movementSpeed = 5f;
+    [SerializeField] float movementSpeed = 5f;
     Vector2 movement;
     Vector2 movementInput;
 
