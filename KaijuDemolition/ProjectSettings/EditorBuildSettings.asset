@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/NielsDevSpace.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Stage1City.unity
+    guid: 83b52b2f55e3e0c4fa53518d94a156c3
+  - enabled: 1
+    path: Assets/Scenes/Stage2World.unity
+    guid: ae3f19472cd07af44ba7f4a78202419e
+  - enabled: 1
+    path: Assets/Scenes/Stage3Space.unity
+    guid: 60f39985f70f6224d814712c01f6e5e6
   m_configObjects: {}
