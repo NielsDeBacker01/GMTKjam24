@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,15 +10,17 @@ public class Player : MonoBehaviour
     public float invincibilityCooldown = 0.1f;
     public float baseAttackActiveTime = 0.25f;
     private float cooldown;
+    public BarSlider slider;
 
     private void Start()
     {
-        HP = baseMaxHP;
+        HP = baseMaxHP; 
     }
 
     private void FixedUpdate()
     {
         cooldown -= Time.deltaTime;
+        slider.SetBar(HP);
     }
 
     public int getSpeed()
