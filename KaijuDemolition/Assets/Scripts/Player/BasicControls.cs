@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class BasicControls: MonoBehaviour
@@ -8,6 +9,7 @@ public class BasicControls: MonoBehaviour
     [SerializeField]
     float movementSpeed = 5f;
     Vector2 movement;
+    Vector2 movementInput;
 
     void Awake()
     {
@@ -17,14 +19,14 @@ public class BasicControls: MonoBehaviour
         rigidbody2D.gravityScale = 0.0f;
     }
 
-    void Update()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movementInput = context.ReadValue<Vector2>();
     }
 
-    void FixedUpdate() 
+    private void FixedUpdate()
     {
-        rigidbody2D.MovePosition(rigidbody2D.position + movement.normalized * movementSpeed * Time.fixedDeltaTime);
+        movement = movementInput * movementSpeed;
+        rigidbody2D.velocity = movement;
     }
 }
