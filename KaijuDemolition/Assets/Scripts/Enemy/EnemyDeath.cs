@@ -6,6 +6,7 @@ public class EnemyDeath : MonoBehaviour
 {
     public GameObject exp;
     private Enemy enemy;
+    private bool isQuitting = false;
 
     void Start()
     {
@@ -20,9 +21,17 @@ public class EnemyDeath : MonoBehaviour
                 Destroy(this.gameObject);
         }
     }
+    void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
 
     void OnDestroy()
     {
-        Instantiate(exp, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
+        if (!isQuitting)
+        {
+            Instantiate(exp, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
+
+        }
     }
 }
