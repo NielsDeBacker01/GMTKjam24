@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         playerValues = playerObject.GetComponent<Player>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //cooldown for damage
         cooldown -= Time.deltaTime;
@@ -37,7 +37,6 @@ public class Enemy : MonoBehaviour
         {
             HP -= playerValues.getDamage();
             cooldown = playerValues.baseAttackActiveTime;
-            Debug.Log(HP);
         }
     }
 

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -17,7 +15,7 @@ public class Player : MonoBehaviour
         HP = baseMaxHP;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         cooldown -= Time.deltaTime;
     }
@@ -27,7 +25,6 @@ public class Player : MonoBehaviour
         {
             HP -= other.gameObject.GetComponent<Enemy>().damage;
             cooldown = invincibilityCooldown;
-            Debug.Log(HP);
         }
     }
 
