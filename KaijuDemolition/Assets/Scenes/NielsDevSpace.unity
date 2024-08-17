@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &442822857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 442822857, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+  m_PrefabInstance: {fileID: 769399686486962983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &442822860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442822857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732aa8406e7a3594392b040f8378d311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1157677339
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +299,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 442822859, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 769399685515761808, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: movementSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 769399686329233954, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: m_RootOrder
       value: 1
