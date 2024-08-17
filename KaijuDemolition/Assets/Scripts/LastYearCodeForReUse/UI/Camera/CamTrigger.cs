@@ -13,7 +13,7 @@ public class CamTrigger : MonoBehaviour
     void Start()
     {
         camCont = Camera.main.GetComponent<CamController>();   
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("PlayerCore");
         wall = GameObject.FindGameObjectWithTag("MoveWall");
     }
 

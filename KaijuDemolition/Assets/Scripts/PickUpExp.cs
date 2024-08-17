@@ -9,7 +9,7 @@ public class PickUpExp : MonoBehaviour
 
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindGameObjectWithTag("PlayerCore");
         if (player != null)
         {
             playerExp = player.GetComponent<PlayerExp>();

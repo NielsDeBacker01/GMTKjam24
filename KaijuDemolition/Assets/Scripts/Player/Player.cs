@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int baseMaxHP = 100;
     [SerializeField] private int baseSpeed = 3;
     [SerializeField] private int baseClawDamage = 1;
-    [SerializeField] private float invincibilityCooldown = 0.1f;
+    public float invincibilityCooldown = 0.1f;
     public float baseAttackActiveTime = 0.25f;
     private float cooldown;
 
@@ -18,14 +18,6 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         cooldown -= Time.deltaTime;
-    }
-
-    private void OnTriggerStay2D(Collider2D other) {
-        if(other.gameObject.CompareTag("Enemy") && cooldown <= 0)
-        {
-            HP -= other.gameObject.GetComponent<Enemy>().damage;
-            cooldown = invincibilityCooldown;
-        }
     }
 
     public int getSpeed()

@@ -13,12 +13,13 @@ public class Enemy : MonoBehaviour
     public int speed = 3;
     public int damage = 1;
     private float cooldown;
+    private float playerCooldown;
 
     private void Start()
     {
         HP = baseMaxHP;
         cooldown = 0;
-        playerObject = GameObject.FindGameObjectWithTag("Player");
+        playerObject = GameObject.FindGameObjectWithTag("PlayerCore");
         playerValues = playerObject.GetComponent<Player>();
     }
 
@@ -26,6 +27,7 @@ public class Enemy : MonoBehaviour
     {
         //cooldown for damage
         cooldown -= Time.deltaTime;
+        playerCooldown -= Time.deltaTime;
 
         //move towards player
         Vector3 direction = (playerObject.transform.position - transform.position).normalized;
@@ -37,6 +39,12 @@ public class Enemy : MonoBehaviour
         {
             HP -= playerValues.getDamage();
             cooldown = playerValues.baseAttackActiveTime;
+        }
+
+        if(other.gameObject.CompareTag("Player") && playerCooldown <= 0)
+        {
+            playerValues.HP -= damage;
+            playerCooldown = playerValues.invincibilityCooldown;
         }
     }
 }
