@@ -5,32 +5,42 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     public int HP;
+    private float size;
     [SerializeField] private int baseMaxHP = 10;
-    private GameObject playerObject;
+    private GameObject player;
     private Player playerValues;
     private float cooldown;
+    private float playersize;
 
     private void Start()
     {
         HP = baseMaxHP;
+        size = this.gameObject.transform.localScale.x * this.gameObject.transform.localScale.y * this.gameObject.transform.localScale.z;
         cooldown = 0;
-        playerObject = GameObject.FindGameObjectWithTag("Player");
-        playerValues = playerObject.GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerValues = player.GetComponent<Player>();
     }
 
     private void FixedUpdate()
     {
         //cooldown for damage
         cooldown -= Time.deltaTime;
+        playersize = player.transform.localScale.x * player.transform.localScale.y * player.transform.localScale.z;
+
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("PlayerAttack") && cooldown <= 0)
         {
-            HP -= playerValues.getDamage();
-            cooldown = playerValues.baseAttackActiveTime;
-            Debug.Log(HP);
+            if (size < playersize)
+                HP = 0;
+            else
+            {
+                HP -= playerValues.getDamage();
+                cooldown = playerValues.baseAttackActiveTime;
+                Debug.Log(HP);
+            }
         }
     }
 }

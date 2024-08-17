@@ -5,12 +5,14 @@ using UnityEngine;
 public class BuildingDestroy : MonoBehaviour
 {
     public GameObject mass;
+    public GameObject player;
     private Building building;
     private bool isQuitting = false;
 
     void Start()
     {
         building = GetComponent<Building>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void FixedUpdate()

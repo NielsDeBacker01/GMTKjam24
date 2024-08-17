@@ -37,7 +37,6 @@ public class Enemy : MonoBehaviour
         {
             HP -= playerValues.getDamage();
             cooldown = playerValues.baseAttackActiveTime;
-            Debug.Log("IS HIT!!!!!!!!!!!!!!!!!!!!!!!!!!");
         }
     }
 }
