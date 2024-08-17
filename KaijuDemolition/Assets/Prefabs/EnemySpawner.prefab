@@ -45,6 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 8087754113279804858, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
-  EnemyCount: 10
   radius: 4
   cooldown: 1
