@@ -58,7 +58,6 @@ public class UIControls: MonoBehaviour
     {
         if(menuActive)
         {
-            Debug.Log(2);
             Vector2 movementInput = context.ReadValue<Vector2>();
             if(movementInput.y > 0)
             {
