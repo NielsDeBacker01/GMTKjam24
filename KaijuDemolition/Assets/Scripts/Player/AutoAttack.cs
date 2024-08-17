@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AutoAttack : MonoBehaviour
 {
-    [SerializeField] private GameObject objectToToggle;
-    [SerializeField] private float activeTime = 0.5f;
-    [SerializeField] private float cooldown = 1.5f;
+    [SerializeField] private GameObject objectToToggle;    
+    [SerializeField] private float cooldown;
+    [SerializeField] Player player;
 
     private void Start()
     {
@@ -18,7 +18,7 @@ public class AutoAttack : MonoBehaviour
         while (true)
         {
             objectToToggle.SetActive(true);
-            yield return new WaitForSeconds(activeTime);
+            yield return new WaitForSeconds(player.baseAttackActiveTime);
             objectToToggle.SetActive(false);
             yield return new WaitForSeconds(cooldown);
         }

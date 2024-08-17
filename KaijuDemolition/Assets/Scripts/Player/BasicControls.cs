@@ -5,8 +5,7 @@ using UnityEngine.InputSystem;
 public class BasicControls: MonoBehaviour
 {
     new Rigidbody2D rigidbody2D;
-
-    [SerializeField] float movementSpeed = 5f;
+    [SerializeField] Player player;
     Vector2 movement;
     Vector2 movementInput;
 
@@ -25,7 +24,7 @@ public class BasicControls: MonoBehaviour
 
     private void FixedUpdate()
     {
-        movement = movementInput * movementSpeed;
+        movement = movementInput * player.getSpeed();
         rigidbody2D.velocity = movement;
     }
 }
