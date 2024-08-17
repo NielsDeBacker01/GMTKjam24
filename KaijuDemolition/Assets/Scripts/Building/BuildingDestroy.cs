@@ -5,14 +5,11 @@ using UnityEngine;
 public class BuildingDestroy : MonoBehaviour
 {
     public GameObject mass;
-    public GameObject player;
     private Building building;
-    private bool isQuitting = false;
 
     void Start()
     {
         building = GetComponent<Building>();
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void FixedUpdate()
@@ -20,20 +17,10 @@ public class BuildingDestroy : MonoBehaviour
         if (building != null)
         {
             if (building.HP <= 0)
+            {
+                Instantiate(mass, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
                 Destroy(this.gameObject);
-        }
-    }
-    void OnApplicationQuit()
-    {
-        isQuitting = true;
-    }
-
-    void OnDestroy()
-    {
-        if (!isQuitting)
-        {
-            Instantiate(mass, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
-
+            }
         }
     }
 }

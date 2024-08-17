@@ -9,7 +9,7 @@ public class PickUpMass : MonoBehaviour
 
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindGameObjectWithTag("PlayerCore");
         if (player != null)
         {
             playerMass = player.GetComponent<PlayerMass>();

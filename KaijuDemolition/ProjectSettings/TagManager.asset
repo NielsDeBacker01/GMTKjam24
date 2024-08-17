@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - PickUp
   - Structure
+  - PlayerStomp
+  - PlayerCore
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
-guid: 4fb3130188bec894db8b00c599830305
+<<<<<<<< HEAD:KaijuDemolition/Assets/Prefabs/Exp.prefab.meta
+guid: 30cf83434d3cc3e46b679630ce94cf7e
 PrefabImporter:
+========
+guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
+DefaultImporter:
+>>>>>>>> 11-hp-ui:KaijuDemolition/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

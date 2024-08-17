@@ -7,7 +7,7 @@ public class Building : MonoBehaviour
     public int HP;
     private float size;
     [SerializeField] private int baseMaxHP = 10;
-    private GameObject player;
+    [SerializeField] private GameObject player;
     private Player playerValues;
     private float cooldown;
     private float playersize;
@@ -17,7 +17,7 @@ public class Building : MonoBehaviour
         HP = baseMaxHP;
         size = this.gameObject.transform.localScale.x * this.gameObject.transform.localScale.y * this.gameObject.transform.localScale.z;
         cooldown = 0;
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("PlayerCore");
         playerValues = player.GetComponent<Player>();
     }
 
@@ -33,7 +33,7 @@ public class Building : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerAttack") && cooldown <= 0)
         {
-            if (size < playersize)
+            if (size <= playersize)
                 HP = 0;
             else
             {
@@ -41,6 +41,12 @@ public class Building : MonoBehaviour
                 cooldown = playerValues.baseAttackActiveTime;
                 Debug.Log(HP);
             }
+        }
+
+        if(other.gameObject.CompareTag("Player"))
+        {
+            if (size <= playersize)
+                HP = 0;
         }
     }
 }
