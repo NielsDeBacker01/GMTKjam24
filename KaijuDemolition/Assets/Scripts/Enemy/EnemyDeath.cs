@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
-    public GameObject prefab;
+    public GameObject exp;
     private Enemy enemy;
 
     void Start()
@@ -12,7 +12,7 @@ public class EnemyDeath : MonoBehaviour
         enemy = GetComponent<Enemy>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (enemy != null)
         {
@@ -23,6 +23,6 @@ public class EnemyDeath : MonoBehaviour
 
     void OnDestroy()
     {
-        Instantiate(prefab, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
+        Instantiate(exp, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
     }
 }
