@@ -7,6 +7,8 @@ public class PlayerMass : MonoBehaviour
     public float currentMass = 1.0f;
     private Vector3 targetScale;
     public float scaleSpeed = 1f;
+    public float zoom = 5f;
+    [SerializeField] private new Camera camera;
 
     void Start()
     {
@@ -22,5 +24,9 @@ public class PlayerMass : MonoBehaviour
     private void FixedUpdate()
     {
         transform.localScale = Vector3.Lerp(transform.localScale, targetScale, scaleSpeed * Time.deltaTime);
+        if(camera.orthographicSize - zoom <= targetScale.x)
+        {
+            camera.orthographicSize += scaleSpeed * Time.deltaTime;
+        }
     }
 }

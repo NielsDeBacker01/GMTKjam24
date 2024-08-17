@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int HP;
+    public float HP;
     [SerializeField] private int baseMaxHP = 10;
     private GameObject playerObject;
     private Player playerValues;

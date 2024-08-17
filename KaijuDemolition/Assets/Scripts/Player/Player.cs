@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public int HP;
     [SerializeField] private int baseMaxHP = 100;
-    [SerializeField] private int baseSpeed = 3;
+    [SerializeField] private float baseSpeed = 3f;
     [SerializeField] private int baseClawDamage = 1;
     public float invincibilityCooldown = 0.1f;
     public float baseAttackActiveTime = 0.25f;
@@ -20,12 +21,12 @@ public class Player : MonoBehaviour
         cooldown -= Time.deltaTime;
     }
 
-    public int getSpeed()
+    public float getSpeed()
     {
-        return baseSpeed;
+        return (float)(baseSpeed * Math.Sqrt(this.transform.lossyScale.x ));
     }
 
-    public int getDamage()
+    public float getDamage()
     {
         return baseClawDamage;
     }

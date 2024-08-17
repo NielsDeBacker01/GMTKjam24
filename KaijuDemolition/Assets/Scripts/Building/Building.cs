@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    public int HP;
+    public float HP;
     private float size;
     [SerializeField] private int baseMaxHP = 10;
     [SerializeField] private GameObject player;

@@ -18,7 +18,7 @@ public class BuildingDestroy : MonoBehaviour
         {
             if (building.HP <= 0)
             {
-                Instantiate(mass, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
+                Instantiate(mass, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
                 Destroy(this.gameObject);
             }
         }

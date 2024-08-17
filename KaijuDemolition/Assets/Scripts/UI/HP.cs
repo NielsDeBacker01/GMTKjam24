@@ -11,6 +11,7 @@ public class HP : MonoBehaviour
     void Start()
     {
         Unpause();
+        player = GameObject.FindGameObjectWithTag("PlayerCore").GetComponent<Player>();
     }
     
     void FixedUpdate()

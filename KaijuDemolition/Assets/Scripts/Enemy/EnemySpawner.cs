@@ -1,5 +1,5 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject theEnemy;
     [SerializeField] private float radius = 5f;
     [SerializeField] private float cooldown = 1.5f;
+    [SerializeField] private Transform player;
 
     private void Start()
     {
@@ -17,10 +18,10 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            float randomAngle = Random.Range(0f, Mathf.PI * 2);
+            float randomAngle = UnityEngine.Random.Range(0f, Mathf.PI * 2);
             Vector3 spawnPosition = new Vector3(
-                Mathf.Cos(randomAngle) * radius,    
-                Mathf.Sin(randomAngle) * radius,    
+                Mathf.Cos(randomAngle) * (float)(radius * Math.Sqrt(player.lossyScale.x )),    
+                Mathf.Sin(randomAngle) * (float)(radius * Math.Sqrt(player.lossyScale.x )),    
                 0f                                  
             );
             spawnPosition += this.gameObject.transform.position;
