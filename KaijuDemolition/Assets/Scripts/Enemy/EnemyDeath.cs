@@ -7,10 +7,18 @@ public class EnemyDeath : MonoBehaviour
     public GameObject prefab;
     private Enemy enemy;
 
+    void Start()
+    {
+        enemy = GetComponent<Enemy>();
+    }
+
     void Update()
     {
-        if (this.gameObject.GetComponent<Enemy>().HP <= 0)
-            Destroy(this.gameObject);
+        if (enemy != null)
+        {
+            if (enemy.HP <= 0)
+                Destroy(this.gameObject);
+        }
     }
 
     void OnDestroy()

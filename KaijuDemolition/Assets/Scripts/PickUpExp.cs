@@ -9,8 +9,7 @@ public class PickUpExp : MonoBehaviour
 
     void Start()
     {
-        // Verwijzing naar de PlayerExperience-component van de speler
-        GameObject player = GameObject.FindGameObjectWithTag("Exp");
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             playerExp = player.GetComponent<PlayerExp>();
@@ -20,7 +19,7 @@ public class PickUpExp : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // Controleren of de speler het object aanraakt
-        if (other.CompareTag("Exp"))
+        if (other.CompareTag("PickUp"))
         {
             if (playerExp != null)
             {
