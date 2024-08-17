@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AimAttack : MonoBehaviour
 {
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f; 
