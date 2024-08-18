@@ -622,6 +622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentExp: 0
+  maxExp: 100
+  slider: {fileID: 0}
 --- !u!114 &1542795443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,12 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7540fe7f2cffe294fa35d9d6b41ef08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 10
-  baseMaxHP: 10
-  baseSpeed: 3
-  baseClawDamage: 1
-  invincibilityCooldown: 0.1
-  baseAttackActiveTime: 0.25
+  playerValues: {fileID: 11400000, guid: f296cd42267353243816b1f320511fa5, type: 2}
 --- !u!114 &6587836288736412911
 MonoBehaviour:
   m_ObjectHideFlags: 0

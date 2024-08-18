@@ -9,7 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98f2b40eaa511e0429ffa637764d306e, type: 3}
-  m_Name: GameVolume
+  m_Script: {fileID: 11500000, guid: e6cf50361fe293349b4283f2ed549fcc, type: 3}
+  m_Name: PlayerValues
   m_EditorClassIdentifier: 
-  volume: 0.5
+  HP: 10
+  baseMaxHP: 10
+  baseSpeed: 3
+  baseClawDamage: 1
+  invincibilityCooldown: 0.1
+  baseAttackActiveTime: 0.25
+  currentExp: 0
+  maxExp: 100

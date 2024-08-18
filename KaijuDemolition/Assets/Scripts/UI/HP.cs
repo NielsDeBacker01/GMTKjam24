@@ -16,9 +16,9 @@ public class HP : MonoBehaviour
     
     void FixedUpdate()
     {   
-        slider.ChangeBar(player.baseMaxHP);
-        slider.SetBar(player.HP);
-        if(player.HP <= 0)
+        slider.ChangeBar(player.getMaxHP());
+        slider.SetBar(player.getCurrentHP());
+        if(player.getCurrentHP() <= 0)
         {
             UIControls.startMenuControls(UIControls.MENU.gameOver);
             Pause();

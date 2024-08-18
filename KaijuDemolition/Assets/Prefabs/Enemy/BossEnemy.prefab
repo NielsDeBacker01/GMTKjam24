@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1139761282324560501}
   - component: {fileID: 4843965121570511380}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: BossEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8087754113279804858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.48, y: 0.06, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 1
-  baseMaxHP: 1
-  speed: 1
+  baseMaxHP: 10
+  speed: 3
   damage: 1
 --- !u!114 &4843965121570511380
 MonoBehaviour:
@@ -164,3 +164,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: {fileID: 6957944002778214308, guid: 30cf83434d3cc3e46b679630ce94cf7e, type: 3}
+  boss: 1

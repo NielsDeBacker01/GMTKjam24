@@ -38,7 +38,7 @@ public class Building : MonoBehaviour
             else
             {
                 HP -= playerValues.getDamage();
-                cooldown = playerValues.baseAttackActiveTime;
+                cooldown = playerValues.getBaseAttackActiveTime();
                 Debug.Log(HP);
             }
         }

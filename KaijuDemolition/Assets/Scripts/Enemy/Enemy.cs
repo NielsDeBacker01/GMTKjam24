@@ -9,8 +9,8 @@ public class Enemy : MonoBehaviour
     public float HP;
     [SerializeField] private int baseMaxHP = 10;
     private GameObject playerObject;
-    private Player playerValues;
-    public int speed = 3;
+    private Player player;
+    public float speed = 3;
     public int damage = 1;
     private float cooldown;
     private float playerCooldown;
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         HP = baseMaxHP;
         cooldown = 0;
         playerObject = GameObject.FindGameObjectWithTag("PlayerCore");
-        playerValues = playerObject.GetComponent<Player>();
+        player = playerObject.GetComponent<Player>();
     }
 
     private void FixedUpdate()
@@ -37,14 +37,14 @@ public class Enemy : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other) {
         if(other.gameObject.CompareTag("PlayerAttack") && cooldown <= 0)
         {
-            HP -= playerValues.getDamage();
-            cooldown = playerValues.baseAttackActiveTime;
+            HP -= player.getDamage();
+            cooldown = player.getBaseAttackActiveTime();
         }
 
         if(other.gameObject.CompareTag("Player") && playerCooldown <= 0)
         {
-            playerValues.HP -= damage;
-            playerCooldown = playerValues.invincibilityCooldown;
+            player.loseHP(damage);
+            playerCooldown = player.getInvincibilityCooldown();
         }
     }
 }

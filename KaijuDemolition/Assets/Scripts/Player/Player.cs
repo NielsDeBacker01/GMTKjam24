@@ -4,25 +4,50 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int HP;
-    public int baseMaxHP = 100;
-    [SerializeField] private float baseSpeed = 3f;
-    [SerializeField] private int baseClawDamage = 1;
-    public float invincibilityCooldown = 0.1f;
-    public float baseAttackActiveTime = 0.25f;
-
-    private void Start()
-    {
-        HP = baseMaxHP; 
-    }
+    [SerializeField] private PlayerValues playerValues;
 
     public float getSpeed()
     {
-        return (float)(baseSpeed * Math.Sqrt(this.transform.lossyScale.x ));
+        return (float)(playerValues.baseSpeed * Math.Sqrt(this.transform.lossyScale.x ));
     }
 
     public float getDamage()
     {
-        return baseClawDamage;
+        return playerValues.baseClawDamage;
+    }
+
+    public int getCurrentHP()
+    {
+        return playerValues.HP;
+    }
+    
+    public int loseHP(int damage)
+    {
+        return playerValues.HP -= damage;
+    }
+    
+    public int getMaxHP()
+    {
+        return playerValues.baseMaxHP;
+    }
+    
+    public float getInvincibilityCooldown()
+    {
+        return playerValues.invincibilityCooldown;
+    }
+    
+    public float getBaseAttackActiveTime()
+    {
+        return playerValues.baseAttackActiveTime;
+    }
+    
+    public int getCurrentExp()
+    {
+        return playerValues.currentExp;
+    }
+    
+    public int getExpGoal()
+    {
+        return playerValues.maxExp;
     }
 }

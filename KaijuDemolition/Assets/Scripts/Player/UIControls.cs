@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class UIControls: MonoBehaviour
 {
 
+    [SerializeField] PlayerValuesReset reset;
     private float optionNumber = 1;
     private float menuSize = 1;
     public enum MENU
@@ -43,6 +44,7 @@ public class UIControls: MonoBehaviour
                     switch(optionNumber)
                     {
                         case 1:
+                            reset.Initialize();
                             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                             menuActive = false;
                             break;

@@ -18,7 +18,7 @@ public class AutoAttack : MonoBehaviour
         while (true)
         {
             objectToToggle.SetActive(true);
-            yield return new WaitForSeconds(player.baseAttackActiveTime);
+            yield return new WaitForSeconds(player.getBaseAttackActiveTime());
             objectToToggle.SetActive(false);
             yield return new WaitForSeconds(cooldown);
         }
