@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d82aeb9a3f86e444bf1769ec8f7b388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theEnemy: {fileID: 8087754113279804858, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
+  enemy1: {fileID: 8087754113279804858, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
+  boss: {fileID: 8087754113279804858, guid: d4c7e204d05347842abce7edfe20d523, type: 3}
   radius: 4
   cooldown: 1
+  player: {fileID: 0}
