@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   baseMaxHP: 10
+  maxHPIncrease: 0
   baseSpeed: 3
-  baseClawDamage: 1
+  speedMult: 1
+  baseClawDamage: 10
+  clawDamageBoost: 0
   invincibilityCooldown: 0.1
   baseAttackActiveTime: 0.25
   currentExp: 0

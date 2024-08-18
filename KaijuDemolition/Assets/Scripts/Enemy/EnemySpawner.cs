@@ -90,7 +90,6 @@ public class EnemySpawner : MonoBehaviour
             }
 
             yield return new WaitForSeconds(cooldown);
-            Debug.Log(timerValue);
         }
     }
 

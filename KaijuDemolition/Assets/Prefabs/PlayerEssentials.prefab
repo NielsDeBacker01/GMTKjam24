@@ -116,6 +116,54 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 418948167416970575}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: levelUpUI
+      value: 
+      objectReference: {fileID: 5444003789708460010}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_PostInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4695281635996761190, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: player
       value: 
@@ -379,6 +427,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8029386640327307259, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
   m_PrefabInstance: {fileID: 6626303085893113811}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5444003789708460010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1187163693507946553, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+  m_PrefabInstance: {fileID: 6626303085893113811}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430544c22c958b44a85c2ba3475ebe7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7594232358384341830 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3643827252363084949, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}

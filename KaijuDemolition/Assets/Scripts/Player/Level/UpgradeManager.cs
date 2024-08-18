@@ -10,10 +10,10 @@ public class UpgradeManager : MonoBehaviour
     {
         // lijst van upgrades
         allUpgrades.Add(new Upgrade("Health Boost", "Increase max health by 20", UpgradeType.HealthBoost, intValue: 20));
-        allUpgrades.Add(new Upgrade("Speed Boost", "Increase speed by 5%", UpgradeType.SpeedBoost, floatValue: 1.05f));
+        allUpgrades.Add(new Upgrade("Speed Boost", "Increase speed by 5%", UpgradeType.SpeedBoost, floatValue: 0.05f));
         allUpgrades.Add(new Upgrade("Claw Damage Boost", "Increase claw damage by 15", UpgradeType.ClawDamageBoost, intValue: 15));
         allUpgrades.Add(new Upgrade("Health Boost", "Increase max health by 100", UpgradeType.HealthBoost, intValue: 100));
-        allUpgrades.Add(new Upgrade("Speed Boost", "Increase speed by 15%", UpgradeType.SpeedBoost, floatValue: 1.15f));
+        allUpgrades.Add(new Upgrade("Speed Boost", "Increase speed by 15%", UpgradeType.SpeedBoost, floatValue: 0.15f));
         allUpgrades.Add(new Upgrade("Claw Damage Boost", "Increase claw damage by 20", UpgradeType.ClawDamageBoost, intValue: 20));
         // ...
     }

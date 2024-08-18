@@ -9,7 +9,7 @@ public enum UpgradeType
     ClawDamageBoost
 }
 
-public class Upgrade : MonoBehaviour
+public class Upgrade
 {
     public string upgradeName;
     public string description;
@@ -31,13 +31,13 @@ public class Upgrade : MonoBehaviour
         switch (upgradeType)
         {
             case UpgradeType.HealthBoost:
-                player.baseMaxHP += intValue;
+                player.raiseHPMax(intValue);
                 break;
             case UpgradeType.SpeedBoost:
-                player.baseSpeed *= floatValue;
+                player.raiseSpeedMult(floatValue);
                 break;
             case UpgradeType.ClawDamageBoost:
-                player.baseClawDamage += intValue;
+                player.raiseDamage(intValue);
                 break;
         }
     }
