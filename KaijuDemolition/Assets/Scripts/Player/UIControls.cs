@@ -45,7 +45,7 @@ public class UIControls: MonoBehaviour
                     {
                         case 1:
                             reset.Initialize();
-                            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                            SceneManager.LoadScene("Stage1City");
                             menuActive = false;
                             break;
                     }
