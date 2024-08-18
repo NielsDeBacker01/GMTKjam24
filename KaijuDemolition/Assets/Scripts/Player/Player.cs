@@ -66,4 +66,24 @@ public class Player : MonoBehaviour
     {
         return playerValues.maxExp;
     }
+
+    public int getLevel()
+    {
+        return playerValues.level;
+    }
+
+    public void setCurrentExp(int value)
+    {
+        playerValues.currentExp = value;
+    }
+    
+    public void setExpGoal(int value)
+    {
+        playerValues.maxExp = value;
+    }
+
+    public void setLevel(int value)
+    {
+        playerValues.level = value;
+    }
 }

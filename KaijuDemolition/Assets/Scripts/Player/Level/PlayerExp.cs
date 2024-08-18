@@ -6,33 +6,27 @@ using UnityEngine.UI;
 public class PlayerExp : MonoBehaviour
 {
     [SerializeField]
-    private int currentExp = 0;
-    [SerializeField]
-    private int maxExp = 100;
-    [SerializeField]
-    private int tempMaxExp = 0;
-    [SerializeField]
-    private int currentLevel;
-    [SerializeField]
     AnimationCurve experienceCurve;
     public BarSlider slider;
     
     [SerializeField]
     private LevelUpUI levelUpUI;
-
+    private Player player;
 
     public void Start()
     {
-        currentLevel = 1;
-        slider.SetBar(currentExp);
-        slider.ChangeBar(maxExp);
+        player = FindObjectOfType<Player>();
+        slider.SetBar(player.getCurrentExp());
+        slider.ChangeBar(player.getExpGoal());
 
         levelUpUI = FindObjectOfType<LevelUpUI>();
     }
 
     public void AddExperience(int amount)
     {
-        currentExp += amount;
+        int currentExp = player.getCurrentExp();
+        int maxExp = player.getExpGoal();
+        player.setCurrentExp(currentExp + amount) ;
         slider.SetBar(currentExp);
 
         if (currentExp >= maxExp)
@@ -41,12 +35,11 @@ public class PlayerExp : MonoBehaviour
 
     void LevelUp()
     {
-
-        currentExp = 0;
-        currentLevel++;
-        tempMaxExp = (int)experienceCurve.Evaluate(currentLevel);
-        maxExp = (int)experienceCurve.Evaluate(currentLevel + 1);
-        slider.ChangeBar(maxExp - tempMaxExp);
+        player.setCurrentExp(0);
+        player.setLevel(player.getLevel() + 1);
+        player.setExpGoal((int)experienceCurve.Evaluate(player.getLevel() + 1));
+        Debug.Log("next level: " + player.getExpGoal());
+        slider.ChangeBar(player.getExpGoal());
 
         // toon upgrades
         levelUpUI.ShowUpgrades();

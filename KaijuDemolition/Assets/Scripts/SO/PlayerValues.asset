@@ -16,10 +16,11 @@ MonoBehaviour:
   baseMaxHP: 10
   maxHPIncrease: 0
   baseSpeed: 3
-  speedMult: 1.1999999
-  baseClawDamage: 1
-  clawDamageBoost: 15
+  speedMult: 1
+  baseClawDamage: 10
+  clawDamageBoost: 20
   invincibilityCooldown: 0.1
   baseAttackActiveTime: 0.25
-  currentExp: 0
-  maxExp: 100
+  currentExp: 40
+  maxExp: 165
+  level: 2

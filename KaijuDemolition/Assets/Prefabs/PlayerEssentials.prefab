@@ -40,6 +40,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8164301089499053071}
     m_Modifications:
+    - target: {fileID: 346464221, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1542795443, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: slider
       value: 
@@ -129,31 +133,63 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: experienceCurve.m_Curve.Array.data[1].time
-      value: 1
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[2].time
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: experienceCurve.m_Curve.Array.data[0].value
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: experienceCurve.m_Curve.Array.data[1].value
-      value: 1
+      value: 65536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[2].value
+      value: 2048
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: experienceCurve.m_Curve.Array.data[0].inSlope
-      value: 0
+      value: 0.2625641
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: experienceCurve.m_Curve.Array.data[1].inSlope
+      value: 1246.3997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[2].inSlope
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: experienceCurve.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: 0.2625641
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[1].inWeight
+      value: 0.13125
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: experienceCurve.m_Curve.Array.data[1].outSlope
+      value: 1246.3997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[2].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[0].outWeight
+      value: 0.4875
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[1].outWeight
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
@@ -162,6 +198,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: experienceCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216942895733696677, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[1].weightedMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4695281635996761190, guid: c67109efa39467944828cf14c7e42bce, type: 3}
@@ -319,11 +359,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316009647487066131, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -245.7
+      value: 304
       objectReference: {fileID: 0}
     - target: {fileID: 4316009647487066131, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 245.20001
+      value: -15.0000305
       objectReference: {fileID: 0}
     - target: {fileID: 4690785256860650350, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_Camera
@@ -359,11 +399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6292037561268751898, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -245.7
+      value: 304
       objectReference: {fileID: 0}
     - target: {fileID: 6292037561268751898, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 220.2
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 8029386640327307259, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_RootOrder

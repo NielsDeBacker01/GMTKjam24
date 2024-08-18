@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1139761282324560501, guid: d4c7e204d05347842abce7edfe20d523, type: 3}
       propertyPath: baseMaxHP
-      value: 30
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5657906103707825504, guid: d4c7e204d05347842abce7edfe20d523, type: 3}
       propertyPath: m_Color.b

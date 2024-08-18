@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1139761282324560501, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
       propertyPath: baseMaxHP
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5657906103707825504, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
       propertyPath: m_Color.b
@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8087754113279804858, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
       propertyPath: m_Name
-      value: Enemy (2)
+      value: Enemy1-3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
