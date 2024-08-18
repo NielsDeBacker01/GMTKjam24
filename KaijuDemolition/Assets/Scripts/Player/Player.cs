@@ -6,8 +6,8 @@ public class Player : MonoBehaviour
 {
     public int HP;
     public int baseMaxHP = 100;
-    [SerializeField] private float baseSpeed = 3f;
-    [SerializeField] private int baseClawDamage = 1;
+    [SerializeField] public float baseSpeed = 3f;
+    [SerializeField] public int baseClawDamage = 1;
     public float invincibilityCooldown = 0.1f;
     public float baseAttackActiveTime = 0.25f;
 
