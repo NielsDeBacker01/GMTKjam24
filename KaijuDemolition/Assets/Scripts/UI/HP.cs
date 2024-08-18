@@ -4,10 +4,10 @@ using UnityEngine.InputSystem;
 
 public class HP : MonoBehaviour
 {
-    public TextMeshProUGUI HPText;
     public Player player;
     public UIControls UIControls;
     public GameObject gameOverScreen;
+    public BarSlider slider;
     void Start()
     {
         Unpause();
@@ -15,14 +15,15 @@ public class HP : MonoBehaviour
     }
     
     void FixedUpdate()
-    {
-        HPText.text = "HP: "  + player.HP;
+    {   
+        slider.ChangeBar(player.baseMaxHP);
+        slider.SetBar(player.HP);
         if(player.HP <= 0)
         {
-            Pause();
             UIControls.startMenuControls(UIControls.MENU.gameOver);
+            Pause();
         }
-    }
+    }    
 
     void Pause()
     {

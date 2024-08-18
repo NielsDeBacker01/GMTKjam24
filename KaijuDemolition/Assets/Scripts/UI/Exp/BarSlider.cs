@@ -11,6 +11,15 @@ public class BarSlider : MonoBehaviour
 
     public void SetBar(int value)
     {
+        if(value < 0)
+        {   
+            value = 0;
+        }
         slider.value = value;
+    }
+
+    public void ChangeBar(int maxValue)
+    {
+        slider.maxValue = maxValue;
     }
 }
