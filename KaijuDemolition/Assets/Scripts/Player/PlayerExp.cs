@@ -18,16 +18,17 @@ public class PlayerExp : MonoBehaviour
         currentExp += amount;
         slider.SetBar(currentExp);
         slider.ChangeBar(maxExp);
-        Debug.Log("EXP toegevoegd: " + amount + ". Totale EXP: " + currentExp);
+
+        if (currentExp >= maxExp)
+            LevelUp();
     }
 
     void LevelUp()
     {
-        if (currentExp >= maxExp)
-        {
-            currentExp = 0;
-            Upgrade();
-        }
+        currentExp = 0;
+        maxExp += 150 ;
+        Upgrade();
+        Debug.Log(maxExp);
     }
 
     void Upgrade()
