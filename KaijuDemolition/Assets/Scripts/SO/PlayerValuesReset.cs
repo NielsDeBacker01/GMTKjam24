@@ -12,6 +12,9 @@ public class PlayerValuesReset : MonoBehaviour
         playerValues.maxHPIncrease = 0;
         playerValues.speedMult = 1f;
         playerValues.clawDamageBoost = 0;
+        playerValues.maxExp = 100;
+        playerValues.currentExp = 0;
+        playerValues.level = 1;
     }
 
     public void Start()

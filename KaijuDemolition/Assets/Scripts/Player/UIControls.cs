@@ -6,20 +6,30 @@ public class UIControls: MonoBehaviour
 {
 
     [SerializeField] PlayerValuesReset reset;
-    private float optionNumber = 1;
-    private float menuSize = 1;
-    public enum MENU
+    //private float optionNumber = 1;
+    //private float menuSize = 1;
+    /*public enum MENU
     {
         gameOver, title
     }
-    private MENU menu;
-    private bool menuActive;
+    private MENU menu;*/
+    //private bool menuActive;
+    public GameObject pauseScreen;
+    public Player player;
+    public GameObject gameOverScreen;
+    public BarSlider slider;
 
     public void Start()
     {
-        menuActive = false;
+        Time.timeScale = 1;
+        gameOverScreen.SetActive(false);
+        pauseScreen.SetActive(false);
+        player = GameObject.FindGameObjectWithTag("PlayerCore").GetComponent<Player>();
+        //menuActive = false;
     }
 
+    //currently unused
+    /*
     public void startMenuControls(MENU menu)
     {
         menuActive = true;
@@ -44,9 +54,7 @@ public class UIControls: MonoBehaviour
                     switch(optionNumber)
                     {
                         case 1:
-                            reset.Initialize();
-                            SceneManager.LoadScene("Stage1City");
-                            menuActive = false;
+                            //Restart();
                             break;
                     }
                     break;
@@ -79,6 +87,55 @@ public class UIControls: MonoBehaviour
                 }
             }
         }
+    }*/
+
+    public void Restart()
+    {
+        reset.Initialize();
+        SceneManager.LoadScene("Stage1City");
+        //menuActive = false;
     }
 
+    public void Pause()
+    {
+        if(Time.timeScale == 0)
+        {
+            Unpause();
+        }
+        else
+        {
+            Time.timeScale = 0;
+            pauseScreen.SetActive(true);
+        }
+
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+        pauseScreen.SetActive(false);
+    }
+    
+    void FixedUpdate()
+    {   
+        slider.ChangeBar(player.getMaxHP());
+        slider.SetBar(player.getCurrentHP());
+        if(player.getCurrentHP() <= 0)
+        {
+            //startMenuControls(UIControls.MENU.gameOver);
+            GameOver();
+        }
+    }    
+
+    void GameOver()
+    {
+        Time.timeScale = 0;
+        gameOverScreen.SetActive(true);
+    }
+
+    void Continue()
+    {
+        Time.timeScale = 1;
+        gameOverScreen.SetActive(false);
+    }
 }

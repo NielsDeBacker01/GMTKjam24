@@ -43,7 +43,7 @@ public class Building : MonoBehaviour
             }
         }
 
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("PickUp"))
         {
             if (size <= playersize)
                 HP = 0;

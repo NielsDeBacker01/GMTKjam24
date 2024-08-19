@@ -16,4 +16,5 @@ public class PlayerValues : ScriptableObject
     public float baseAttackActiveTime = 0.25f;
     public int currentExp = 0;
     public int maxExp = 100;
+    public int level = 1;
 }

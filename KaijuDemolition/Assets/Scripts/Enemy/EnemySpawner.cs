@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy(1);
                 }
             }
-            else if(50 < timerValue)
+            else if(50 < timerValue && 100 > timerValue)
             {
                 for (int i = 0; i < 3; i++)
                 {
@@ -56,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy(2);
                 }
             }
-            else if(75 < timerValue)
+            else if(75 < timerValue && 125 > timerValue)
             {
                 for (int i = 0; i < 3; i++)
                 {
@@ -101,8 +101,8 @@ public class EnemySpawner : MonoBehaviour
     {
         float randomAngle = UnityEngine.Random.Range(0f, Mathf.PI * 2);
         Vector3 spawnPosition = new Vector3(
-            Mathf.Cos(randomAngle) * (float)(radius * Math.Sqrt(player.lossyScale.x )),    
-            Mathf.Sin(randomAngle) * (float)(radius * Math.Sqrt(player.lossyScale.x )),    
+            Mathf.Cos(randomAngle) * (float)(radius * player.lossyScale.x ),    
+            Mathf.Sin(randomAngle) * (float)(radius * player.lossyScale.x ),    
             0f                                  
         );
         spawnPosition += this.gameObject.transform.position;

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     public float getSpeed()
     {
-        return (float)(playerValues.baseSpeed * playerValues.speedMult * Math.Sqrt(this.transform.lossyScale.x ));
+        return (float)((playerValues.baseSpeed + Math.Sqrt(this.transform.lossyScale.x) - 1) * playerValues.speedMult);
     }
 
     public void raiseSpeedMult(float value)
@@ -65,5 +65,25 @@ public class Player : MonoBehaviour
     public int getExpGoal()
     {
         return playerValues.maxExp;
+    }
+
+    public int getLevel()
+    {
+        return playerValues.level;
+    }
+
+    public void setCurrentExp(int value)
+    {
+        playerValues.currentExp = value;
+    }
+    
+    public void setExpGoal(int value)
+    {
+        playerValues.maxExp = value;
+    }
+
+    public void setLevel(int value)
+    {
+        playerValues.level = value;
     }
 }
