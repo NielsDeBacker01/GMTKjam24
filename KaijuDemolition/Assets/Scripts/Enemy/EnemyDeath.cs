@@ -31,6 +31,10 @@ public class EnemyDeath : MonoBehaviour
                     {
                         SceneManager.LoadScene("Stage3Space");
                     }
+                    if(SceneManager.GetActiveScene().name == "Stage3Space")
+                    {
+                        GameObject.FindGameObjectWithTag("UI").GetComponent<UIControls>().Victory();
+                    }
                     
                 }
                 audioManager.playEnemyDeathSound();

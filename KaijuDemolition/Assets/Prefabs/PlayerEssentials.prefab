@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 769399686123457446, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: smoothSpeed
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 769399686329233954, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -321,9 +325,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4601803066714468711}
     - target: {fileID: 5097610493910537275, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: victoryScreen
+      value: 
+      objectReference: {fileID: 4079979266064993148}
+    - target: {fileID: 5097610493910537275, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 8960197032065148864}
+    - target: {fileID: 6587836288736412911, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: scaleSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c67109efa39467944828cf14c7e42bce, type: 3}
 --- !u!4 &1171264838625728054 stripped
@@ -580,6 +592,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -24.699997
       objectReference: {fileID: 0}
+    - target: {fileID: 4539372302599725532, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6652386635299199644}
+    - target: {fileID: 4539372302599725532, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PostGame
+      objectReference: {fileID: 0}
     - target: {fileID: 4690785256860650350, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_Camera
       value: 
@@ -680,6 +700,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7255921382365282057, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1705469305034821990}
+    - target: {fileID: 7255921382365282057, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255921382365282057, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TitleScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7286381627332789192, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -765,6 +797,11 @@ GameObject:
 --- !u!4 &3790701675812108328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8029386640327307259, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+  m_PrefabInstance: {fileID: 6626303085893113811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4079979266064993148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7163999995462982831, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
   m_PrefabInstance: {fileID: 6626303085893113811}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4601803066714468711 stripped
