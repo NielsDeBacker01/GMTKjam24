@@ -43,7 +43,6 @@ public class Building : MonoBehaviour
                 sfx.Play();
                 HP -= playerValues.getDamage();
                 cooldown = playerValues.getBaseAttackActiveTime();
-                Debug.Log(HP);
             }
         }
 

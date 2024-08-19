@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8725096387792540888, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3709109791322606889, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
     - {fileID: -4896750407593289716, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
