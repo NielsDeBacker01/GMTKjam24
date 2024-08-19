@@ -198,6 +198,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3318479652536387617, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318479652536387617, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318479652536387617, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318479652536387617, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318479652536387617, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 820
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318479652536387617, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 464
+      objectReference: {fileID: 0}
     - target: {fileID: 4408701362944253655, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
       propertyPath: m_Name
       value: TitleScreen
@@ -209,6 +233,14 @@ PrefabInstance:
     - target: {fileID: 5865440590924831040, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865440590924831040, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865440590924831040, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 5865440590924831040, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
       propertyPath: m_LocalPosition.x
@@ -248,6 +280,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5865440590924831040, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900971890916243686, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900971890916243686, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156139002215018874, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156139002215018874, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
+      propertyPath: m_ScreenMatchMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9156139002215018875, guid: f57fcb958cdcb3d4eb8a137a0ac067da, type: 3}
@@ -309,7 +357,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.798374
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

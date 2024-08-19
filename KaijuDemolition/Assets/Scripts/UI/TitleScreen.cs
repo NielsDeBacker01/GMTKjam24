@@ -19,4 +19,9 @@ public class TitleScreen : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Title()
+    {
+        SceneManager.LoadScene("Stage0TitleScreen");
+    }
 }

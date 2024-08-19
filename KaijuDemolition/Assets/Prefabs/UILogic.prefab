@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 604262588560693968}
   - component: {fileID: 604262588560693975}
+  - component: {fileID: 4871708102892294445}
   m_Layer: 0
   m_Name: UILogic
   m_TagString: Untagged
@@ -49,3 +50,15 @@ MonoBehaviour:
   player: {fileID: 0}
   gameOverScreen: {fileID: 0}
   slider: {fileID: 0}
+--- !u!114 &4871708102892294445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604262588560693972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dba77ab94d50ab48b67db4ae50eca50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
