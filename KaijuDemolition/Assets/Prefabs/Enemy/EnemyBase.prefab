@@ -96,7 +96,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8087754113279804858}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   speed: 1
   damage: 1
   sprite: {fileID: 0}
+  enemyCounter: {fileID: 11400000, guid: 54dc6e759fffc92439ae7a4a51cc3ef1, type: 2}
 --- !u!114 &4843965121570511380
 MonoBehaviour:
   m_ObjectHideFlags: 0

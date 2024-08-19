@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cf50361fe293349b4283f2ed549fcc, type: 3}
   m_Name: PlayerValues
   m_EditorClassIdentifier: 
-  HP: 999993724
-  baseMaxHP: 10000
+  HP: 10
+  baseMaxHP: 10
   maxHPIncrease: 0
   baseSpeed: 3
-  speedMult: 1
-  baseClawDamage: 1000
+  speedMult: 1.05
+  baseClawDamage: 10
   clawDamageBoost: 0
   invincibilityCooldown: 0.1
   baseAttackActiveTime: 0.25
   currentExp: 0
-  maxExp: 100
-  level: 1
+  maxExp: 215
+  level: 3

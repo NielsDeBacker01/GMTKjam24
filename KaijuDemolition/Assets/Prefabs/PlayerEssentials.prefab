@@ -322,19 +322,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerValues: {fileID: 11400000, guid: f296cd42267353243816b1f320511fa5, type: 2}
---- !u!114 &5683745960968028374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6652386635299199647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e90015c3629e734895d26fd26dd5f64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyCounter: {fileID: 11400000, guid: 54dc6e759fffc92439ae7a4a51cc3ef1, type: 2}
 --- !u!1001 &6626303085893113811
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private EnemyCounter enemyCounter;
     [SerializeField] private GameObject enemy1_1;
     [SerializeField] private GameObject enemy1_2;
     [SerializeField] private GameObject enemy1_3;
@@ -102,12 +101,11 @@ public class EnemySpawner : MonoBehaviour
     {
         float randomAngle = UnityEngine.Random.Range(0f, Mathf.PI * 2);
         Vector3 spawnPosition = new Vector3(
-            Mathf.Cos(randomAngle) * (float)(radius * Math.Sqrt(player.lossyScale.x )),    
-            Mathf.Sin(randomAngle) * (float)(radius * Math.Sqrt(player.lossyScale.x )),    
+            Mathf.Cos(randomAngle) * (float)(radius * player.lossyScale.x ),    
+            Mathf.Sin(randomAngle) * (float)(radius * player.lossyScale.x ),    
             0f                                  
         );
         spawnPosition += this.gameObject.transform.position;
-        enemyCounter.counter++;
         switch(SceneManager.GetActiveScene().name)
         {
             case "Stage1City":
@@ -158,7 +156,6 @@ public class EnemySpawner : MonoBehaviour
             0f                                  
         );
         spawnPosition += this.gameObject.transform.position;
-        enemyCounter.counter++;
         switch(SceneManager.GetActiveScene().name)
         {
             case "Stage1City":

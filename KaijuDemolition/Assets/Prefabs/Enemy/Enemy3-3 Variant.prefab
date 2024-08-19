@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.33490568
       objectReference: {fileID: 0}
+    - target: {fileID: 6599869488295934103, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8087754113279804858, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
       propertyPath: m_Name
       value: Enemy3-3 Variant

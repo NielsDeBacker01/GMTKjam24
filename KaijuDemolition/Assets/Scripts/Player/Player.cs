@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     public float getSpeed()
     {
-        return (float)(playerValues.baseSpeed * playerValues.speedMult * Math.Sqrt(this.transform.lossyScale.x ));
+        return (float)((playerValues.baseSpeed + Math.Sqrt(this.transform.lossyScale.x) - 1) * playerValues.speedMult);
     }
 
     public void raiseSpeedMult(float value)

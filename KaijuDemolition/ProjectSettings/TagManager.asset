@@ -10,6 +10,8 @@ TagManager:
   - Structure
   - PlayerStomp
   - PlayerCore
+  - Exp
+  - Mass
   layers:
   - Default
   - TransparentFX
