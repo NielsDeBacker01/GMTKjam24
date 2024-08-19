@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3395587454216144001, guid: 05add1a72c1f9f346bac71f2141349a1, type: 3}
       propertyPath: m_Mode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3395587454216144006, guid: 05add1a72c1f9f346bac71f2141349a1, type: 3}
       propertyPath: m_AnimationFrameRate
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3395587455277405096, guid: 05add1a72c1f9f346bac71f2141349a1, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3395587455277405096, guid: 05add1a72c1f9f346bac71f2141349a1, type: 3}
       propertyPath: m_LocalPosition.x
