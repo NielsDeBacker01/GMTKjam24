@@ -8,6 +8,7 @@ public class EnemyDeath : MonoBehaviour
     public GameObject exp;
     private Enemy enemy;
     [SerializeField] private bool boss = false;
+    [SerializeField] private EnemyCounter enemyCounter;
     void Start()
     {
         enemy = GetComponent<Enemy>();
@@ -32,6 +33,7 @@ public class EnemyDeath : MonoBehaviour
                     
                 }
                 Instantiate(exp, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
+                enemyCounter.counter--;
                 Destroy(this.gameObject);
             }
         }

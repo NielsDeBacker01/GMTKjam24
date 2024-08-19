@@ -256,6 +256,10 @@ PrefabInstance:
       propertyPath: enemy3_X
       value: 
       objectReference: {fileID: 1249595086898569285, guid: f899a491b921622439e82389f8ab0429, type: 3}
+    - target: {fileID: 4695281635996761190, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 11400000, guid: 54dc6e759fffc92439ae7a4a51cc3ef1, type: 2}
     - target: {fileID: 5097610493910537274, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: HPText
       value: 
@@ -318,6 +322,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerValues: {fileID: 11400000, guid: f296cd42267353243816b1f320511fa5, type: 2}
+--- !u!114 &5683745960968028374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652386635299199647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e90015c3629e734895d26fd26dd5f64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCounter: {fileID: 11400000, guid: 54dc6e759fffc92439ae7a4a51cc3ef1, type: 2}
 --- !u!1001 &6626303085893113811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,9 +342,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8164301089499053071}
     m_Modifications:
+    - target: {fileID: 62480285097466288, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 227147246155606124, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 227147246155606124, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2357823837134112657, guid: 01eecb9746c7d714886a870084c82f8e, type: 3}
       propertyPath: m_Color.b

@@ -151,6 +151,7 @@ MonoBehaviour:
   baseMaxHP: 1
   speed: 1
   damage: 1
+  sprite: {fileID: 0}
 --- !u!114 &4843965121570511380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +166,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exp: {fileID: 6957944002778214308, guid: 30cf83434d3cc3e46b679630ce94cf7e, type: 3}
   boss: 0
+  enemyCounter: {fileID: 11400000, guid: 54dc6e759fffc92439ae7a4a51cc3ef1, type: 2}

@@ -1149,6 +1149,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerEssentials
       objectReference: {fileID: 0}
+    - target: {fileID: 1289737311860297976, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289737311860297976, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8164301089499053071, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1191,6 +1199,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164301089499053071, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030373090130329329, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9030373090130329329, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

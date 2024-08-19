@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public int damage = 1;
     private float cooldown;
     private float playerCooldown;
+    [SerializeField] SpriteRenderer sprite;
 
     private void Start()
     {
@@ -32,6 +33,17 @@ public class Enemy : MonoBehaviour
         //move towards player
         Vector3 direction = (playerObject.transform.position - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
+        if(sprite != null)
+        {
+            if(direction.x > 0.1)
+            {
+                sprite.flipX = false;
+            }
+            else if(direction.x < -0.1)
+            {
+                sprite.flipX = true;
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other) {

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private EnemyCounter enemyCounter;
     [SerializeField] private GameObject enemy1_1;
     [SerializeField] private GameObject enemy1_2;
     [SerializeField] private GameObject enemy1_3;
@@ -41,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy(1);
                 }
             }
-            else if(50 < timerValue)
+            else if(50 < timerValue && 100 > timerValue)
             {
                 for (int i = 0; i < 3; i++)
                 {
@@ -56,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy(2);
                 }
             }
-            else if(75 < timerValue)
+            else if(75 < timerValue && 125 > timerValue)
             {
                 for (int i = 0; i < 3; i++)
                 {
@@ -106,6 +107,7 @@ public class EnemySpawner : MonoBehaviour
             0f                                  
         );
         spawnPosition += this.gameObject.transform.position;
+        enemyCounter.counter++;
         switch(SceneManager.GetActiveScene().name)
         {
             case "Stage1City":
@@ -156,6 +158,7 @@ public class EnemySpawner : MonoBehaviour
             0f                                  
         );
         spawnPosition += this.gameObject.transform.position;
+        enemyCounter.counter++;
         switch(SceneManager.GetActiveScene().name)
         {
             case "Stage1City":
