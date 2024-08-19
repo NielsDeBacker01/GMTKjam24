@@ -39,6 +39,7 @@ public class PlayerExp : MonoBehaviour
         player.setLevel(player.getLevel() + 1);
         player.setExpGoal((int)experienceCurve.Evaluate(player.getLevel() + 1));
         Debug.Log("next level: " + player.getExpGoal());
+        slider.SetBar(player.getCurrentExp());
         slider.ChangeBar(player.getExpGoal());
 
         // toon upgrades
