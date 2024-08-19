@@ -6,14 +6,14 @@ public class UIControls: MonoBehaviour
 {
 
     [SerializeField] PlayerValuesReset reset;
-    private float optionNumber = 1;
-    private float menuSize = 1;
+    //private float optionNumber = 1;
+    //private float menuSize = 1;
     /*public enum MENU
     {
         gameOver, title
     }
     private MENU menu;*/
-    private bool menuActive;
+    //private bool menuActive;
     public GameObject pauseScreen;
     public Player player;
     public GameObject gameOverScreen;
@@ -25,7 +25,7 @@ public class UIControls: MonoBehaviour
         gameOverScreen.SetActive(false);
         pauseScreen.SetActive(false);
         player = GameObject.FindGameObjectWithTag("PlayerCore").GetComponent<Player>();
-        menuActive = false;
+        //menuActive = false;
     }
 
     //currently unused
@@ -93,7 +93,7 @@ public class UIControls: MonoBehaviour
     {
         reset.Initialize();
         SceneManager.LoadScene("Stage1City");
-        menuActive = false;
+        //menuActive = false;
     }
 
     public void Pause()
