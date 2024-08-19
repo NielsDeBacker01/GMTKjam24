@@ -33,6 +33,8 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 556f2c91089e486479b3833db1fec1f7, type: 3}
+    - {fileID: 2800000, guid: 9a239dabad284c54daaf8b6f55a60267, type: 3}
+    - {fileID: 102900000, guid: 3dbfc6b1553e8234fa0560f9fbc749ca, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -637,6 +639,7 @@ SpriteAtlas:
   - {fileID: -1522017217, guid: 556f2c91089e486479b3833db1fec1f7, type: 3}
   - {fileID: 1229593302, guid: 556f2c91089e486479b3833db1fec1f7, type: 3}
   - {fileID: 372355949, guid: 556f2c91089e486479b3833db1fec1f7, type: 3}
+  - {fileID: 21300000, guid: 9a239dabad284c54daaf8b6f55a60267, type: 3}
   m_PackedSpriteNamesToIndex:
   - CP_V1.0.4_273
   - CP_V1.0.4_263
@@ -1237,6 +1240,7 @@ SpriteAtlas:
   - CP_V1.0.4_265
   - CP_V1.0.4_272
   - CP_V1.0.4_264
+  - pixelart_starfield
   m_RenderDataMap: {}
   m_Tag: City
   m_IsVariant: 0
