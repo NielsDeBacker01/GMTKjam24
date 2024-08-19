@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -3307,7 +3307,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Trees+_148: -491271995
       Trees+_9: 2078219581
       Trees+_16: 266150862
       Trees+_17: -850744281
@@ -3319,6 +3318,7 @@ TextureImporter:
       Trees+_15: 1528578627
       Trees+_126: 1445677305
       Trees+_63: 374543474
+      Trees+_137: 395474244
       Trees+_34: 1365696806
       Trees+_119: 1576027454
       Trees+_101: -921907203
@@ -3335,16 +3335,16 @@ TextureImporter:
       Trees+_99: -54131853
       Trees+_112: 1059386758
       Trees+_27: 1878857749
-      Trees+_86: -356298641
-      Trees+_90: 379828317
-      Trees+_144: 1678976566
-      Trees+_13: 85205305
-      Trees+_103: 416028658
-      Trees+_57: -721726492
-      Trees+_68: 821731255
-      Trees+_110: 1623190857
-      Trees+_85: 453472961
       Trees+_104: -597752780
+      Trees+_86: -356298641
+      Trees+_144: 1678976566
+      Trees+_90: 379828317
+      Trees+_110: 1623190857
+      Trees+_57: -721726492
+      Trees+_13: 85205305
+      Trees+_68: 821731255
+      Trees+_103: 416028658
+      Trees+_85: 453472961
       Trees+_39: -619971162
       Trees+_49: -836120399
       Trees+_12: 56446409
@@ -3372,16 +3372,16 @@ TextureImporter:
       Trees+_124: -801086584
       Trees+_40: 1666438201
       Trees+_8: -1003456046
-      Trees+_96: -363643409
+      Trees+_139: 1153022964
       Trees+_45: -1058094397
       Trees+_25: 1894505032
+      Trees+_145: 1977572479
       Trees+_100: -150570382
-      Trees+_139: 1153022964
+      Trees+_96: -363643409
       Trees+_22: 1225758049
       Trees+_47: 2093462767
       Trees+_19: -1338726892
       Trees+_130: -563349296
-      Trees+_145: 1977572479
       Trees+_20: -522535651
       Trees+_44: -1225879284
       Trees+_62: -408912206
@@ -3444,21 +3444,21 @@ TextureImporter:
       Trees+_118: 696078490
       Trees+_75: -2058301672
       Trees+_117: -734481500
-      Trees+_146: -1075297634
+      Trees+_148: -491271995
       Trees+_6: 1625487330
-      Trees+_108: -1171340814
+      Trees+_146: -1075297634
       Trees+_107: 949812874
       Trees+_127: -1636983014
       Trees+_123: -1433176089
       Trees+_135: 563815425
       Trees+_31: -59783521
       Trees+_141: -458458573
-      Trees+_137: 395474244
+      Trees+_108: -1171340814
       Trees+_60: -397388912
       Trees+_18: 691983192
       Trees+_105: 315421408
-      Trees+_26: 1370235038
       Trees+_73: 1520390680
+      Trees+_26: 1370235038
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
