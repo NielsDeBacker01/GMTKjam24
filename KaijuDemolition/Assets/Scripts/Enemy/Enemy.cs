@@ -15,6 +15,9 @@ public class Enemy : MonoBehaviour
     private float cooldown;
     private float playerCooldown;
     [SerializeField] SpriteRenderer sprite;
+    [SerializeField] AudioSource sfx;
+    [SerializeField] AudioSource sfx2;
+    [SerializeField] AudioValues volume;
 
     private void Start()
     {
@@ -49,6 +52,8 @@ public class Enemy : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other) {
         if(other.gameObject.CompareTag("PlayerAttack") && cooldown <= 0)
         {
+            sfx.volume = volume.sfx;
+            sfx.Play();
             HP -= player.getDamage();
             cooldown = player.getBaseAttackActiveTime();
         }
@@ -56,6 +61,8 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.CompareTag("Player") && playerCooldown <= 0)
         {
             player.loseHP(damage);
+            sfx2.volume = volume.sfx;
+            sfx2.Play();
             playerCooldown = player.getInvincibilityCooldown();
         }
     }

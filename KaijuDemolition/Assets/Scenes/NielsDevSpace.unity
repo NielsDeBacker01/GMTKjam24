@@ -595,6 +595,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerEssentials
       objectReference: {fileID: 0}
+    - target: {fileID: 297881453191292709, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 854894181955331354, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171264838625728052, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1289737311860297976, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -602,6 +614,30 @@ PrefabInstance:
     - target: {fileID: 1289737311860297976, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940030930771071356, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940030930993495662, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835459025345216276, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319608554918738103, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5614498678137706081, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465237510594924857, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8164301089499053071, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
       propertyPath: m_RootOrder
@@ -646,6 +682,10 @@ PrefabInstance:
     - target: {fileID: 8164301089499053071, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398362617406065284, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8960197032065148864, guid: e2a58957f0bc934438ad638b990c9ba4, type: 3}
       propertyPath: m_IsActive

@@ -16,14 +16,16 @@ public class UIControls: MonoBehaviour
     //private bool menuActive;
     public GameObject pauseScreen;
     public Player player;
+    public GameObject optionsScreen;
     public GameObject gameOverScreen;
     public BarSlider slider;
-
+    [SerializeField] private AudioManager audioManager;
     public void Start()
     {
         Time.timeScale = 1;
         gameOverScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        optionsScreen.SetActive(false);
         player = GameObject.FindGameObjectWithTag("PlayerCore").GetComponent<Player>();
         //menuActive = false;
     }
@@ -113,6 +115,7 @@ public class UIControls: MonoBehaviour
     public void Unpause()
     {
         Time.timeScale = 1;
+        ExitOptions();
         pauseScreen.SetActive(false);
     }
     
@@ -123,6 +126,7 @@ public class UIControls: MonoBehaviour
         if(player.getCurrentHP() <= 0)
         {
             //startMenuControls(UIControls.MENU.gameOver);
+            audioManager.playPlayerDeathSound();
             GameOver();
         }
     }    
@@ -137,5 +141,15 @@ public class UIControls: MonoBehaviour
     {
         Time.timeScale = 1;
         gameOverScreen.SetActive(false);
+    }
+
+    void OpenOptions()
+    {
+        optionsScreen.SetActive(true);
+    }
+
+    void ExitOptions()
+    {
+        optionsScreen.SetActive(false);
     }
 }

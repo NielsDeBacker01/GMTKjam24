@@ -11,6 +11,8 @@ public class Building : MonoBehaviour
     private Player playerValues;
     private float cooldown;
     private float playersize;
+    [SerializeField] AudioSource sfx;
+    [SerializeField] AudioValues volume;
 
     private void Start()
     {
@@ -37,6 +39,8 @@ public class Building : MonoBehaviour
                 HP = 0;
             else
             {
+                sfx.volume = volume.sfx;
+                sfx.Play();
                 HP -= playerValues.getDamage();
                 cooldown = playerValues.getBaseAttackActiveTime();
                 Debug.Log(HP);

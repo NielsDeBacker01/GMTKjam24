@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreen : MonoBehaviour
 {
+    public GameObject optionsScreen;
+
+    public void Start()
+    {
+        optionsScreen.SetActive(false);
+    }
+
     public void Load()
     {
         SceneManager.LoadScene("Stage1City");
@@ -12,7 +19,12 @@ public class TitleScreen : MonoBehaviour
 
     public void Options()
     {
-        
+        optionsScreen.SetActive(true);
+    }
+
+    public void ExitOptions()
+    {
+        optionsScreen.SetActive(false);
     }
 
     public void Quit()

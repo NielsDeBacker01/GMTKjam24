@@ -7,6 +7,8 @@ public class AutoAttack : MonoBehaviour
     [SerializeField] private GameObject objectToToggle;    
     [SerializeField] private float cooldown;
     [SerializeField] Player player;
+    [SerializeField] AudioSource sfx;
+    [SerializeField] AudioValues volume;
 
     private void Start()
     {
@@ -18,6 +20,8 @@ public class AutoAttack : MonoBehaviour
         while (true)
         {
             objectToToggle.SetActive(true);
+            sfx.volume = volume.sfx;
+            sfx.Play();
             yield return new WaitForSeconds(player.getBaseAttackActiveTime());
             objectToToggle.SetActive(false);
             yield return new WaitForSeconds(cooldown);

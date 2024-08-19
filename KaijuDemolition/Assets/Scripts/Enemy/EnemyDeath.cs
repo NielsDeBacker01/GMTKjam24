@@ -8,9 +8,11 @@ public class EnemyDeath : MonoBehaviour
     public GameObject exp;
     private Enemy enemy;
     [SerializeField] private bool boss = false;
+    private AudioManager audioManager;
     void Start()
     {
         enemy = GetComponent<Enemy>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void FixedUpdate()
@@ -31,6 +33,7 @@ public class EnemyDeath : MonoBehaviour
                     }
                     
                 }
+                audioManager.playEnemyDeathSound();
                 Instantiate(exp, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
                 Destroy(this.gameObject);
             }

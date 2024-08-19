@@ -12,6 +12,7 @@ TagManager:
   - PlayerCore
   - Exp
   - Mass
+  - Audio
   layers:
   - Default
   - TransparentFX
