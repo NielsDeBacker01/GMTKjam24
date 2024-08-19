@@ -75,6 +75,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.75077426
       objectReference: {fileID: 0}
+    - target: {fileID: 3709109791322606889, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723533576249311619, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3856499787561714553, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
       propertyPath: m_Name
       value: BiggerBuilding Variant
