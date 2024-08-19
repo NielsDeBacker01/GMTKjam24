@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +27,7 @@ public class LevelUpUI : MonoBehaviour
         for (int i = 0; i < upgrades.Count; i++)
         {
             Upgrade upgrade = upgrades[i];
-            upgradeButtons[i].GetComponentInChildren<Text>().text = upgrade.upgradeName;
+            upgradeButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = upgrade.upgradeName;
             upgradeButtons[i].onClick.RemoveAllListeners();
             upgradeButtons[i].onClick.AddListener(() => ApplyUpgrade(upgrade));
         }

@@ -457,6 +457,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: c92f431b-2cf6-4374-9e42-5540dd343fed
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2919744d-8fb5-4671-b87d-fa8796cb4ebc
+    m_ActionName: Player/Escape[/Keyboard/escape,/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1166,7 +1170,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1542795443}
-    m_RemovedComponents: []
+    - target: {fileID: 604262588560693975, guid: a29c3877f7d750e459f8e0d4ec898dbe, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1542795443}
+    m_RemovedComponents:
+    - {fileID: 604262588560693974, guid: a29c3877f7d750e459f8e0d4ec898dbe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a29c3877f7d750e459f8e0d4ec898dbe, type: 3}
 --- !u!114 &5097610493910537275 stripped
 MonoBehaviour:
