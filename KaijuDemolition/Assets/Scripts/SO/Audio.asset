@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec78c84ed10827646905e4a826e57ac5, type: 3}
   m_Name: Audio
   m_EditorClassIdentifier: 
-  music: 0
-  sfx: 0.20673037
+  music: 0.25
+  sfx: 0.5

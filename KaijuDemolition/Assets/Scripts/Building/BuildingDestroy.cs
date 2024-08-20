@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +25,7 @@ public class BuildingDestroy : MonoBehaviour
                 Destroy(this.gameObject);
 
                 Renderer renderer = GetComponent<Renderer>();
-                float buildingSize = this.gameObject.transform.localScale.x * this.gameObject.transform.localScale.y;
+                float buildingSize = (int)Math.Floor(Math.Sqrt( this.gameObject.transform.localScale.x * this.gameObject.transform.localScale.y ));
 
                 GameObject massInstance = Instantiate(mass, transform.position, Quaternion.identity);
 

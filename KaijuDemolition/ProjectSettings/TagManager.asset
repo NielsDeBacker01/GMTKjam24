@@ -14,6 +14,8 @@ TagManager:
   - Mass
   - Audio
   - UI
+  - Description
+  - Name
   layers:
   - Default
   - TransparentFX
