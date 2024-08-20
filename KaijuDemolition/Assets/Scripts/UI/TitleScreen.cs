@@ -7,11 +7,21 @@ public class TitleScreen : MonoBehaviour
 {
     public GameObject optionsScreen;
     public GameObject tutorialScreen;
+    [SerializeField] private TutorialCheck check;
 
     public void Start()
     {
         optionsScreen.SetActive(false);
         tutorialScreen.SetActive(false);
+        if(SceneManager.GetActiveScene().name == "Stage1City" && !check.tutorialSeen)
+        {
+            OpenTuto();
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void Load()
@@ -36,6 +46,11 @@ public class TitleScreen : MonoBehaviour
 
     public void ExitTuto()
     {
+        if(!check.tutorialSeen)
+        {
+            Time.timeScale = 1;
+            check.tutorialSeen = true;
+        }
         tutorialScreen.SetActive(false);
     }
 

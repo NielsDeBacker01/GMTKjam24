@@ -323,10 +323,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
@@ -342,11 +346,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6652386635299199644}
     - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1705469305034821990}
+    - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Navigate
       objectReference: {fileID: 0}
     - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
@@ -358,11 +370,23 @@ PrefabInstance:
       value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ExitTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UIControls, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TitleScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 769399685515761821, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 769399686123457446, guid: c67109efa39467944828cf14c7e42bce, type: 3}
@@ -425,6 +449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 956826450146172865, guid: c67109efa39467944828cf14c7e42bce, type: 3}
+      propertyPath: check
+      value: 
+      objectReference: {fileID: 11400000, guid: 09a50cbed6b5e404e8206c7bda57928d, type: 2}
     - target: {fileID: 956826450146172865, guid: c67109efa39467944828cf14c7e42bce, type: 3}
       propertyPath: optionsScreen
       value: 

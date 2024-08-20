@@ -648,6 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsScreen: {fileID: 4878571752976348573}
   tutorialScreen: {fileID: 3156229973504620677}
+  check: {fileID: 11400000, guid: 09a50cbed6b5e404e8206c7bda57928d, type: 2}
 --- !u!1 &3380064587250556656
 GameObject:
   m_ObjectHideFlags: 0
