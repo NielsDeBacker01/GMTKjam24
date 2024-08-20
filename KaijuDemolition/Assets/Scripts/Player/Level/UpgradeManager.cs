@@ -13,15 +13,15 @@ public class UpgradeManager : MonoBehaviour
     {
         // lijst van basic upgrades
         allUpgrades.Add(new Upgrade("Health Boost", "Increase max health by 10 & heal 10", UpgradeType.HealthBoost, intValue: 10));
-        allUpgrades.Add(new Upgrade("Speed Boost", "Increase speed by 5%", UpgradeType.SpeedBoost, floatValue: 0.05f));
+        allUpgrades.Add(new Upgrade("Speed Boost", "Increase speed by 15%", UpgradeType.SpeedBoost, floatValue: 0.15f));
         allUpgrades.Add(new Upgrade("Claw Damage Boost", "Increase claw damage by 15", UpgradeType.ClawDamageBoost, intValue: 15));
         allUpgrades.Add(new Upgrade("Claw Range Boost", "Increase claw size by 10%", UpgradeType.ClawAOE, floatValue: 0.1f));
         allUpgrades.Add(new Upgrade("Claw Speed Boost", "Increase claw attack speed by 10%", UpgradeType.ClawSpeed, floatValue: 0.9f));
         allUpgrades.Add(new Upgrade("Big Health Boost", "Increase max health by 30 & heal 30", UpgradeType.HealthBoost, intValue: 30));
-        allUpgrades.Add(new Upgrade("Big Speed Boost", "Increase speed by 15%", UpgradeType.SpeedBoost, floatValue: 0.15f));
+        allUpgrades.Add(new Upgrade("Big Speed Boost", "Increase speed by 30%", UpgradeType.SpeedBoost, floatValue: 0.30f));
         allUpgrades.Add(new Upgrade("Big Claw Damage Boost", "Increase claw damage by 20", UpgradeType.ClawDamageBoost, intValue: 20));
         allUpgrades.Add(new Upgrade("Big Claw Range Boost", "Increase claw size by 20%", UpgradeType.ClawAOE, floatValue: 0.2f));
-        allUpgrades.Add(new Upgrade("Claw Speed Boost", "Increase claw attack speed by 20%", UpgradeType.ClawSpeed, floatValue: 0.8f));
+        allUpgrades.Add(new Upgrade("Big Claw Speed Boost", "Increase claw attack speed by 20%", UpgradeType.ClawSpeed, floatValue: 0.8f));
 
         player = GameObject.FindGameObjectWithTag("PlayerCore").GetComponent<Player>();
     }
@@ -70,7 +70,7 @@ public class UpgradeManager : MonoBehaviour
                     case 1:
                         return new Upgrade("Frightening Aura Lvl2", "Deal more damage to enemies around you in a larger radius", UpgradeType.AuraLevel, intValue: 1);
                     case 2:
-                        return new Upgrade("Frightening Aura Lvl3", "Deal even more damage to enemies around you in an even larger radius", UpgradeType.AuraLevel, intValue: 1);
+                        return new Upgrade("Frightening Aura LvlMAX", "Deal even more damage to enemies around you in an even larger radius", UpgradeType.AuraLevel, intValue: 1);
                     case 3:
                         return InvalidItem();
                 }
@@ -87,7 +87,7 @@ public class UpgradeManager : MonoBehaviour
                     case 3:
                         return new Upgrade("Boulder Throw Lvl4", "Surround yourself with even more boulders", UpgradeType.BoulderLevel, intValue: 1);                    
                     case 4:
-                        return new Upgrade("Boulder Throw Lvl5", "Surround yourself with even stronger boulders", UpgradeType.BoulderLevel, intValue: 1);
+                        return new Upgrade("Boulder Throw LvlMAX", "Surround yourself with even stronger boulders", UpgradeType.BoulderLevel, intValue: 1);
                     case 5:
                         return InvalidItem();
                 }
