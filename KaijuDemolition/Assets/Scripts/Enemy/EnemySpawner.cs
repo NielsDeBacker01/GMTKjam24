@@ -21,66 +21,88 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float cooldown = 1.5f;
     [SerializeField] private Transform player;
     private float timerValue = 0;
+    private float scale1Stop = 0;
+    private float scale2Stop = 0;
+    private float scaleBossSpawn = 0;
     private bool bossSpawned;
 
     private void Start()
     {
         timerValue = 0;
-        StartCoroutine(SpawnEnemies());
         bossSpawned = false;
+
+        switch(SceneManager.GetActiveScene().name)
+        {
+            case "Stage1City":
+                scale1Stop = 10;
+                scale2Stop = 20;
+                scaleBossSpawn = 40;
+                break;
+            case "Stage2World":
+                scale1Stop = 10;
+                scale2Stop = 24;
+                scaleBossSpawn = 40;
+                break;       
+            case "Stage3Space":
+                scale1Stop = 8;
+                scale2Stop = 20;
+                scaleBossSpawn = 30;
+                break;
+        }
+
+        StartCoroutine(SpawnEnemies());
     }
 
     private IEnumerator SpawnEnemies()
     {
         while (true)
         {
-            if(timerValue < 50)
+            if(timerValue < 70)
             {
                 for (int i = (int)Math.Ceiling(timerValue/10); i > 0; i--)
                 {
                     spawnEnemy(1);
                 }
             }
-            else if(50 < timerValue && 100 > timerValue)
+            else if(player.lossyScale.x < scale1Stop && 70 < timerValue)
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     spawnEnemy(1);
                 }
             }
 
-            if(timerValue > 25 && 75 > timerValue)
+            if(timerValue > 50 && 120 > timerValue)
             {
-                for (int i = (int)Math.Ceiling((timerValue-25)/10); i > 0; i--)
+                for (int i = (int)Math.Ceiling((timerValue-50)/10); i > 0; i--)
                 {
                     spawnEnemy(2);
                 }
             }
-            else if(75 < timerValue && 125 > timerValue)
+            else if(player.lossyScale.x < scale2Stop && 120 < timerValue)
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     spawnEnemy(2);
                 }
             }
 
-            if(timerValue > 50 && 100 > timerValue)
+            if(timerValue > 100 && 180 > timerValue)
             {
                 for (int i = (int)Math.Ceiling((timerValue-50)/10); i > 0; i--)
                 {
                     spawnEnemy(3);
                 }
             }
-            else if(100 < timerValue)
+            else if(player.lossyScale.x < scale2Stop && 180 < timerValue)
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     spawnEnemy(3);
                 }
             }
             
-            
-            if(player.lossyScale.x > 10)
+            if(player.lossyScale.x > scaleBossSpawn)
             {
                 if(!bossSpawned)
                 {

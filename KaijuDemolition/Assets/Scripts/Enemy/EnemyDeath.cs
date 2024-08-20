@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class EnemyDeath : MonoBehaviour
     public GameObject exp;
     private Enemy enemy;
     [SerializeField] private bool boss = false;
+    [SerializeField] private float expMult = 1f;
     private AudioManager audioManager;
     void Start()
     {
@@ -40,14 +42,13 @@ public class EnemyDeath : MonoBehaviour
                 audioManager.playEnemyDeathSound();
 
                 Renderer renderer = GetComponent<Renderer>();
-                float buildingSize = this.gameObject.transform.localScale.x * this.gameObject.transform.localScale.y;
 
-                GameObject massInstance = Instantiate(exp, transform.position, Quaternion.identity);
+                GameObject expInstance = Instantiate(exp, transform.position, Quaternion.identity);
 
-                PickUpMass pickUpMass = massInstance.GetComponent<PickUpMass>();
+                PickUpExp pickUpMass = expInstance.GetComponent<PickUpExp>();
                 if (pickUpMass != null)
                 {
-                    pickUpMass.Initialize(buildingSize);
+                    pickUpMass.Initialize(expMult);
                 }
 
                 Destroy(this.gameObject);

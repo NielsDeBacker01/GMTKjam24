@@ -16,9 +16,9 @@ public class PickUpExp : MonoBehaviour
         }
     }
 
-    public void Initialize(int enemySize)
+    public void Initialize(float enemySize)
     {
-        expAmount *= enemySize;
+        expAmount = (int)(expAmount * enemySize);
     }
 
     void OnTriggerEnter2D(Collider2D other)

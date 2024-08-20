@@ -16,19 +16,19 @@ MonoBehaviour:
   baseMaxHP: 20
   maxHPIncrease: 0
   baseSpeed: 4
-  speedMult: 0.5
+  speedMult: 1
   baseAOE: 1
-  defense: 50
+  defense: 0
   AOEmult: 1
   baseClawDamage: 10
   clawDamageBoost: 0
   invincibilityCooldown: 0.1
   baseAttackActiveTime: 0.25
   attackCooldown: 0.5
-  attackCooldownMult: 0.4608
+  attackCooldownMult: 1
   currentExp: 0
-  maxExp: 557
-  level: 7
+  maxExp: 100
+  level: 1
   auraLevel: 0
   boulderLevel: 0
   beamLevel: 0
@@ -37,5 +37,5 @@ MonoBehaviour:
   bigLevel: 0
   vampireLevel: 0
   dominanceLevel: 0
-  skinLevel: 1
+  skinLevel: 0
   velociraptorLevel: 0
