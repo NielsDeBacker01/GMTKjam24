@@ -54,7 +54,7 @@ public class EnemyDeath : MonoBehaviour
                     pickUpMass.Initialize(expMult);
                 }
 
-                float randomValue = Random.Range(0f, 1f);
+                float randomValue = UnityEngine.Random.Range(0f, 1f);
                 if (randomValue <= rng)
                 {
                     Instantiate(hp, transform.position, Quaternion.identity);

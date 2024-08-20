@@ -19,6 +19,7 @@ public class PickUpExp : MonoBehaviour
     public void Initialize(float enemySize)
     {
         expAmount = (int)(expAmount * enemySize);
+        this.transform.localScale = new Vector3((float)(0.3 * enemySize),(float)(0.3 * enemySize),1);
     }
 
     void OnTriggerEnter2D(Collider2D other)

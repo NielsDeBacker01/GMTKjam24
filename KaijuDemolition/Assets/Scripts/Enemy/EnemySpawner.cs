@@ -23,7 +23,6 @@ public class EnemySpawner : MonoBehaviour
     private float timerValue = 0;
     private float scale1Stop = 0;
     private float scale2Stop = 0;
-    private float scaleBossSpawn = 0;
     private bool bossSpawned;
 
     private void Start()
