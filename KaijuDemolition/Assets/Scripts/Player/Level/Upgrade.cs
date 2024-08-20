@@ -68,12 +68,17 @@ public class Upgrade
                 break;            
             case UpgradeType.ArmsLevel:
                 player.ArmsLevel += intValue;
+                player.unlockArms();
+                player.lowerAttack(2);
                 break;            
             case UpgradeType.SurvivorLevel:
                 player.SurvivorLevel += intValue;
+                player.survivor();
                 break;            
             case UpgradeType.BigLevel:
                 player.BigLevel += intValue;
+                player.growAoe(0.5f);
+                player.lowerAttackCooldown(2f);
                 break;            
             case UpgradeType.VampireLevel:
                 player.VampireLevel += intValue;

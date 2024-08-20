@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
             sfx.volume = volume.sfx;
             sfx.Play();
             HP -= player.getDamage();
+            player.vampire();
             cooldown = player.getBaseAttackActiveTime();
         }
 

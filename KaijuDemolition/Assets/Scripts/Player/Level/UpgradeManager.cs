@@ -36,7 +36,7 @@ public class UpgradeManager : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             //int index = Random.Range(0, copyOfAllUpgrades.Count + itemCount);
-            int index = 17;
+            int index = 12;
             if(index >= copyOfAllUpgrades.Count)
             {
                 if(bannedNumbers.Contains(index))
@@ -87,6 +87,10 @@ public class UpgradeManager : MonoBehaviour
                     case 0:
                         return new Upgrade("Kaiju Beam Lvl1", "Fire a horizontal beam", UpgradeType.BeamLevel, intValue: 1);
                     case 1:
+                        return new Upgrade("Kaiju Beam Lvl2", "Fire a horizontal beam with less cooldown", UpgradeType.BeamLevel, intValue: 1);
+                    case 2:
+                        return new Upgrade("Kaiju Beam LvlMAX", "Fire a horizontal beam with even less cooldown", UpgradeType.BeamLevel, intValue: 1);
+                    case 3:
                         return InvalidItem();
                 }
                 break;
@@ -94,7 +98,7 @@ public class UpgradeManager : MonoBehaviour
                 switch(player.ArmsLevel)
                 {
                     case 0:
-                        return new Upgrade("Extra Arms Lvl1", "Add a back attack BUT lower damage by 50%", UpgradeType.ArmsLevel, intValue: 1);
+                        return new Upgrade("Tail attack", "Add a back attack BUT lower damage by 50%", UpgradeType.ArmsLevel, intValue: 1);
                     case 1:
                         return InvalidItem();
                 }
@@ -105,6 +109,10 @@ public class UpgradeManager : MonoBehaviour
                     case 0:
                         return new Upgrade("Adrenaline Lvl1", "Increase claw damage by 30 & increase speed by 20% BUT drop to 1 HP", UpgradeType.SurvivorLevel, intValue: 1);
                     case 1:
+                        return new Upgrade("Adrenaline Lvl2", "Increase claw damage by another 30 & increase speed by another 20% BUT drop to 1 HP", UpgradeType.SurvivorLevel, intValue: 1);
+                    case 2:
+                        return new Upgrade("Adrenaline LvlMAX", "Increase claw damage by another 30 & increase speed by another 20% BUT drop to 1 HP", UpgradeType.SurvivorLevel, intValue: 1);
+                    case 3:
                         return InvalidItem();
                 }
                 break;
@@ -112,8 +120,12 @@ public class UpgradeManager : MonoBehaviour
                 switch(player.BigLevel)
                 {
                     case 0:
-                        return new Upgrade("Big Arms Lvl1", "Increase claw size by 50% BUT lower claw damage by 50%", UpgradeType.BigLevel, intValue: 1);
+                        return new Upgrade("Big Arms Lvl1", "Increase claw size by 50% BUT lower claw speed by 50%", UpgradeType.BigLevel, intValue: 1);                    
                     case 1:
+                        return new Upgrade("Big Arms Lvl2", "Increase claw size by another 50% BUT lower claw speed by another 50%", UpgradeType.BigLevel, intValue: 1);                    
+                    case 2:
+                        return new Upgrade("Big Arms LvlMAX", "Increase claw size by another 50% BUT lower claw speed by another 50%", UpgradeType.BigLevel, intValue: 1);
+                    case 3:
                         return InvalidItem();
                 }
                 break;
@@ -121,8 +133,12 @@ public class UpgradeManager : MonoBehaviour
                 switch(player.VampireLevel)
                 {
                     case 0:
-                        return new Upgrade("Vampirism Lvl1", "10% change to heal 1% of max HP when killing enemy", UpgradeType.VampireLevel, intValue: 1);
+                        return new Upgrade("Vampirism Lvl1", "5% change to heal 1% of max HP when hitting enemy", UpgradeType.VampireLevel, intValue: 1);
                     case 1:
+                        return new Upgrade("Vampirism Lvl2", "Raise change to heal 1% of max HP when hitting enemy by 5%", UpgradeType.VampireLevel, intValue: 1);
+                    case 2:
+                        return new Upgrade("Vampirism LvlMAX", "Raise change to heal 1% of max HP when hitting enemy by 5%", UpgradeType.VampireLevel, intValue: 1);
+                    case 3:
                         return InvalidItem();
                 }
                 break;
@@ -130,7 +146,7 @@ public class UpgradeManager : MonoBehaviour
                 switch(player.DominanceLevel)
                 {
                     case 0:
-                        return new Upgrade("Dominance Lvl1", "Increase claw damage relative to your size", UpgradeType.DominanceLevel, intValue: 1);
+                        return new Upgrade("Dominance", "Increase claw damage relative to your size", UpgradeType.DominanceLevel, intValue: 1);
                     case 1:
                         return InvalidItem();
                 }
@@ -141,13 +157,13 @@ public class UpgradeManager : MonoBehaviour
                     case 0:
                         return new Upgrade("Armored Skin Lvl1", "Increase defense by 50 BUT lower speed by 50%", UpgradeType.SkinLevel, intValue: 1);
                     case 1:
-                        return new Upgrade("Armored Skin Lvl2", "Increase defense by 50 BUT lower speed by 50%", UpgradeType.SkinLevel, intValue: 1);
+                        return new Upgrade("Armored Skin Lvl2", "Increase defense by another 50 BUT lower speed by another 50%", UpgradeType.SkinLevel, intValue: 1);
                     case 2:
-                        return new Upgrade("Armored Skin Lvl3", "Increase defense by 50 BUT lower speed by 50%", UpgradeType.SkinLevel, intValue: 1);
+                        return new Upgrade("Armored Skin Lvl3", "Increase defense by another 50 BUT lower speed by another 50%", UpgradeType.SkinLevel, intValue: 1);
                     case 3:
-                        return new Upgrade("Armored Skin Lvl4", "Increase defense by 50 BUT lower speed by 50%", UpgradeType.SkinLevel, intValue: 1);
+                        return new Upgrade("Armored Skin Lvl4", "Increase defense by another 50 BUT lower speed by another 50%", UpgradeType.SkinLevel, intValue: 1);
                     case 4:
-                        return new Upgrade("Armored Skin Lvl5", "Increase defense by 50 BUT lower speed by 50%", UpgradeType.SkinLevel, intValue: 1);
+                        return new Upgrade("Armored Skin LvlMAX", "Increase defense by another 50 BUT lower speed by another 50%", UpgradeType.SkinLevel, intValue: 1);
                     case 5:
                         return InvalidItem();
                 }
@@ -158,9 +174,9 @@ public class UpgradeManager : MonoBehaviour
                     case 0:
                         return new Upgrade("Velociraptor Genes Lvl1", "Increase speed by 50% and increase claw attack speed by 50% BUT drop attack by 100", UpgradeType.VelociraptorLevel, intValue: 1);
                     case 1:
-                        return new Upgrade("Velociraptor Genes Lvl2", "Increase speed by 50% and increase claw attack speed by 50% BUT drop attack by 100", UpgradeType.VelociraptorLevel, intValue: 1);
+                        return new Upgrade("Velociraptor Genes Lvl2", "Increase speed by another 50% and increase claw attack speed by another 50% BUT drop attack by another 100", UpgradeType.VelociraptorLevel, intValue: 1);
                     case 2:
-                        return new Upgrade("Velociraptor Genes Lvl3", "Increase speed by 50% and increase claw attack speed by 50% BUT drop attack by 100", UpgradeType.VelociraptorLevel, intValue: 1);
+                        return new Upgrade("Velociraptor Genes LvlMAX", "Increase speed by another 50% and increase claw attack speed by another 50% BUT drop attack by another 100", UpgradeType.VelociraptorLevel, intValue: 1);
                     case 3:
                         return InvalidItem();
                 }

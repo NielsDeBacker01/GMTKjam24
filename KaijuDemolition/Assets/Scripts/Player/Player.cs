@@ -5,7 +5,19 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerValues playerValues;
+    [SerializeField] private GameObject backAttack;
 
+    public void Start()
+    {
+        if(playerValues.armsLevel == 0)
+        {
+            backAttack.SetActive(false);
+        }
+        else
+        {
+            backAttack.SetActive(true);
+        }
+    }
     public float getAoe()
     {
         return (float)(playerValues.baseAOE * playerValues.AOEmult);
@@ -47,6 +59,10 @@ public class Player : MonoBehaviour
     public float getDamage()
     {
         float attack = playerValues.baseClawDamage + playerValues.clawDamageBoost;
+        if(playerValues.dominanceLevel > 0)
+        {
+            attack *= (float) Math.Sqrt(this.transform.lossyScale.x);
+        }
         if(attack < 1)
         {
             return 1;
@@ -61,7 +77,14 @@ public class Player : MonoBehaviour
 
     public void lowerAttack(int value)
     {
-        playerValues.clawDamageBoost -= value;
+        if(value == 2)
+        {
+            playerValues.clawDamageBoost = (int)Math.Floor(playerValues.clawDamageBoost * 0.5);
+        }
+        else
+        {
+            playerValues.clawDamageBoost -= value;
+        }
     }
 
     public int getCurrentHP()
@@ -71,7 +94,7 @@ public class Player : MonoBehaviour
     
     public void loseHP(int damage)
     {
-        playerValues.HP -= damage * ( 500 /  playerValues.defense);
+        playerValues.HP -= damage * ( (500 - playerValues.defense) / 500);
     }
 
     public void raiseDefense(int defense)
@@ -188,5 +211,42 @@ public class Player : MonoBehaviour
     {
         get { return playerValues.velociraptorLevel; }
         set { playerValues.velociraptorLevel = value; }
+    }
+
+    public void vampire()
+    {
+        int roll = UnityEngine.Random.Range(1, 21);
+        if(roll <= VampireLevel && playerValues.HP < getMaxHP())
+        {
+            playerValues.HP += 1;
+        }
+        
+    }
+
+    public void survivor()
+    {
+        playerValues.HP = 1;
+        raiseSpeedMult(0.2f);
+        raiseDamage(30);
+    }
+
+    public void unlockArms()
+    {
+        backAttack.SetActive(true);
+    }
+
+    public float getBeamCooldown()
+    {
+        switch(playerValues.beamLevel)
+        {
+            case 1:
+                return 3;
+            case 2:
+                return 2;
+            case 3:
+                return 1;
+            default:
+                return 3;
+        }
     }
 }
