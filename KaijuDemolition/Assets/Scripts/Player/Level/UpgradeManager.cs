@@ -35,8 +35,7 @@ public class UpgradeManager : MonoBehaviour
 
         for (int i = 0; i < count; i++)
         {
-            //int index = Random.Range(0, copyOfAllUpgrades.Count + itemCount);
-            int index = 12;
+            int index = Random.Range(0, copyOfAllUpgrades.Count + itemCount);
             if(index >= copyOfAllUpgrades.Count)
             {
                 if(bannedNumbers.Contains(index))
@@ -69,6 +68,10 @@ public class UpgradeManager : MonoBehaviour
                     case 0:
                         return new Upgrade("Frightening Aura Lvl1", "Deal damage to enemies around you", UpgradeType.AuraLevel, intValue: 1);
                     case 1:
+                        return new Upgrade("Frightening Aura Lvl2", "Deal more damage to enemies around you in a larger radius", UpgradeType.AuraLevel, intValue: 1);
+                    case 2:
+                        return new Upgrade("Frightening Aura Lvl3", "Deal even more damage to enemies around you in an even larger radius", UpgradeType.AuraLevel, intValue: 1);
+                    case 3:
                         return InvalidItem();
                 }
                 break;
@@ -76,8 +79,16 @@ public class UpgradeManager : MonoBehaviour
                 switch(player.BoulderLevel)
                 {
                     case 0:
-                        return new Upgrade("Boulder Throw Lvl1", "Surround yourself with boulders", UpgradeType.BoulderLevel, intValue: 1);
+                        return new Upgrade("Boulder Throw Lvl1", "Surround yourself with boulders", UpgradeType.BoulderLevel, intValue: 1);                    
                     case 1:
+                        return new Upgrade("Boulder Throw Lvl2", "Surround yourself with more boulders", UpgradeType.BoulderLevel, intValue: 1);                    
+                    case 2:
+                        return new Upgrade("Boulder Throw Lvl3", "Surround yourself with stronger boulders", UpgradeType.BoulderLevel, intValue: 1);                    
+                    case 3:
+                        return new Upgrade("Boulder Throw Lvl4", "Surround yourself with even more boulders", UpgradeType.BoulderLevel, intValue: 1);                    
+                    case 4:
+                        return new Upgrade("Boulder Throw Lvl5", "Surround yourself with even stronger boulders", UpgradeType.BoulderLevel, intValue: 1);
+                    case 5:
                         return InvalidItem();
                 }
                 break;
