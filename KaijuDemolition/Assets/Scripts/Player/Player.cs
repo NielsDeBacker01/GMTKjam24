@@ -6,6 +6,16 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerValues playerValues;
 
+    public float getAoe()
+    {
+        return (float)(playerValues.baseAOE * playerValues.AOEmult);
+    }
+
+    public void growAoe(float value)
+    {
+        playerValues.AOEmult += value;
+    }
+
     public float getSpeed()
     {
         return (float)((playerValues.baseSpeed + Math.Sqrt(this.transform.lossyScale.x) - 1) * playerValues.speedMult);

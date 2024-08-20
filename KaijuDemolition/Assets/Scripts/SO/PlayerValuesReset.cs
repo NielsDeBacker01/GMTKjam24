@@ -11,6 +11,7 @@ public class PlayerValuesReset : MonoBehaviour
         playerValues.HP = playerValues.baseMaxHP; 
         playerValues.maxHPIncrease = 0;
         playerValues.speedMult = 1f;
+        playerValues.AOEmult = 1f;
         playerValues.clawDamageBoost = 0;
         playerValues.maxExp = 100;
         playerValues.currentExp = 0;

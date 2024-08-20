@@ -9,7 +9,9 @@ public class PlayerValues : ScriptableObject
     public int baseMaxHP = 100;
     public int maxHPIncrease = 0;
     public float baseSpeed = 3f;
-    public float speedMult = 0f;
+    public float speedMult = 1f;
+    public float baseAOE = 3f;
+    public float AOEmult = 1f;
     public int baseClawDamage = 1;
     public int clawDamageBoost = 0;
     public float invincibilityCooldown = 0.1f;

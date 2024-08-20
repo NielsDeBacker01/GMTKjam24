@@ -3,12 +3,18 @@ using UnityEngine;
 public class AimAttack : MonoBehaviour
 {
     [SerializeField] private GameObject attackObject;   
+    public Player playerValues;
     [SerializeField] SpriteRenderer player;
     [SerializeField] SpriteRenderer attack;
     [SerializeField] private bool alwaysSpin = false;
     float attackAngle;
+    public void Start()
+    {
+        playerValues = GameObject.FindGameObjectWithTag("PlayerCore").GetComponent<Player>();
+    }
     private void FixedUpdate()
     {
+        attackObject.transform.localScale = new Vector3(1,playerValues.getAoe(),1);
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
         Vector3 direction = mousePosition - transform.position;
