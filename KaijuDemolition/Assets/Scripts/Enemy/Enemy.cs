@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioSource sfx2;
     [SerializeField] AudioValues volume;
     [SerializeField] Animator animator;
-    private float timer;
+    private float hitCooldown;
 
     private void Start()
     {
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
         rockCooldown = 0;
         playerObject = GameObject.FindGameObjectWithTag("PlayerCore");
         player = playerObject.GetComponent<Player>();
-        animator = player.GetComponent<Animator>();
+        animator = player.GetComponent<BasicControls>().animator;
     }
 
     private void FixedUpdate()
@@ -55,6 +55,12 @@ public class Enemy : MonoBehaviour
             {
                 sprite.flipX = true;
             }
+        }
+
+        hitCooldown -= Time.deltaTime;
+        if(hitCooldown <= 0)
+        {
+            animator.SetBool("hit", false);
         }
     }
 
@@ -108,10 +114,7 @@ public class Enemy : MonoBehaviour
 
     void PlayAnimation()
     {
-        timer += Time.deltaTime;
-        if(timer < 2)
-            animator.SetBool("hit", true);
-        else
-            animator.SetBool("hit", true);
+        hitCooldown = 500;
+        animator.SetBool("hit", true);            
     }
 }
