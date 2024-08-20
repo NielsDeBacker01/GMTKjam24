@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cf50361fe293349b4283f2ed549fcc, type: 3}
   m_Name: PlayerValues
   m_EditorClassIdentifier: 
-  HP: 19
+  HP: 4
   baseMaxHP: 20
   maxHPIncrease: 0
-  baseSpeed: 30
+  baseSpeed: 3
   speedMult: 1
   baseClawDamage: 10
   clawDamageBoost: 0
