@@ -36,17 +36,14 @@ public class EnemySpawner : MonoBehaviour
             case "Stage1City":
                 scale1Stop = 10;
                 scale2Stop = 20;
-                scaleBossSpawn = 40;
                 break;
             case "Stage2World":
                 scale1Stop = 10;
                 scale2Stop = 24;
-                scaleBossSpawn = 40;
                 break;       
             case "Stage3Space":
                 scale1Stop = 8;
                 scale2Stop = 20;
-                scaleBossSpawn = 30;
                 break;
         }
 
@@ -102,7 +99,7 @@ public class EnemySpawner : MonoBehaviour
                 }
             }
             
-            if(player.lossyScale.x > scaleBossSpawn)
+            if(player.lossyScale.x > scale2Stop)
             {
                 if(!bossSpawned)
                 {
