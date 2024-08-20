@@ -80,7 +80,7 @@ public class EnemySpawner : MonoBehaviour
             }
             
             
-            if(player.lossyScale.x > 5)
+            if(player.lossyScale.x > 10)
             {
                 if(!bossSpawned)
                 {
