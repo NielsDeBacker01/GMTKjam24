@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUpMass : MonoBehaviour
 {
-    public float massAmount = 0.1f; 
+    public float massAmount; 
     private PlayerMass playerMass;
 
     void Start()
@@ -14,6 +14,12 @@ public class PickUpMass : MonoBehaviour
         {
             playerMass = player.GetComponent<PlayerMass>();
         }
+    }
+
+    public void Initialize(float buildingSize)
+    {
+        // Scale massAmount based on the building size
+        massAmount *= buildingSize;
     }
 
     void OnTriggerEnter2D(Collider2D other)

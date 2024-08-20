@@ -21,8 +21,18 @@ public class BuildingDestroy : MonoBehaviour
             if (building.HP <= 0)
             {
                 audioManager.playExplodeSound();
-                Instantiate(mass, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
                 Destroy(this.gameObject);
+
+                Renderer renderer = GetComponent<Renderer>();
+                float buildingSize = this.gameObject.transform.localScale.x * this.gameObject.transform.localScale.y;
+
+                GameObject massInstance = Instantiate(mass, transform.position, Quaternion.identity);
+
+                PickUpMass pickUpMass = massInstance.GetComponent<PickUpMass>();
+                if (pickUpMass != null)
+                {
+                    pickUpMass.Initialize(buildingSize);
+                }
             }
         }
     }
