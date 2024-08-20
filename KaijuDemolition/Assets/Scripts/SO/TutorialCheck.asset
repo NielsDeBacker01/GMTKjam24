@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac6cbe4a6e7d974996ea4a34ed8b7db, type: 3}
   m_Name: TutorialCheck
   m_EditorClassIdentifier: 
-  tutorialSeen: 0
+  tutorialSeen: 1

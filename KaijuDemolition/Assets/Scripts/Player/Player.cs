@@ -84,6 +84,10 @@ public class Player : MonoBehaviour
         else
         {
             playerValues.clawDamageBoost -= value;
+            if(playerValues.clawDamageBoost < 0)
+            {
+                playerValues.clawDamageBoost = 0;
+            }
         }
     }
 

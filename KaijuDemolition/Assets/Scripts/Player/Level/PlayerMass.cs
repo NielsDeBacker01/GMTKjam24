@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class PlayerMass : MonoBehaviour
     public float currentMass = 1.0f;
     private Vector3 targetScale;
     public float scaleSpeed = 1f;
-    public float zoom = 5f;
+    public float zoom = 6f;
     [SerializeField] private new Camera camera;
 
     void Start()
@@ -24,7 +25,7 @@ public class PlayerMass : MonoBehaviour
     private void FixedUpdate()
     {
         transform.localScale = Vector3.Lerp(transform.localScale, targetScale, scaleSpeed * Time.deltaTime);
-        if(camera.orthographicSize - zoom <= targetScale.x)
+        if(camera.orthographicSize - (zoom * Math.Sqrt(targetScale.x)) <= targetScale.x)
         {
             camera.orthographicSize += scaleSpeed * Time.deltaTime;
         }
