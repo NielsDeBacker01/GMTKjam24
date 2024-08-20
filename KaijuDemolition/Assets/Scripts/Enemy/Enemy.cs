@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioSource sfx;
     [SerializeField] AudioSource sfx2;
     [SerializeField] AudioValues volume;
+    [SerializeField] Animator animator;
+    private float timer;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class Enemy : MonoBehaviour
         rockCooldown = 0;
         playerObject = GameObject.FindGameObjectWithTag("PlayerCore");
         player = playerObject.GetComponent<Player>();
+        animator = player.GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -96,9 +99,19 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.CompareTag("Player") && playerCooldown <= 0)
         {
             player.loseHP(damage);
+            PlayAnimation();
             sfx2.volume = volume.sfx;
             sfx2.Play();
             playerCooldown = player.getInvincibilityCooldown();
         }
+    }
+
+    void PlayAnimation()
+    {
+        timer += Time.deltaTime;
+        if(timer < 2)
+            animator.SetBool("hit", true);
+        else
+            animator.SetBool("hit", true);
     }
 }

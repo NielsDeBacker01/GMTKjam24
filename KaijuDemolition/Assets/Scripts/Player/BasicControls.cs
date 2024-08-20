@@ -8,6 +8,7 @@ public class BasicControls: MonoBehaviour
     [SerializeField] Player player;
     Vector2 movement;
     Vector2 movementInput;
+    public Animator animator;
 
     void Awake()
     {
@@ -26,5 +27,8 @@ public class BasicControls: MonoBehaviour
     {
         movement = movementInput * player.getSpeed();
         rigidbody2D.velocity = movement;
+
+        if (movement != new Vector2(0, 0)) animator.SetBool("moving", true);
+        else animator.SetBool("moving", false);
     }
 }

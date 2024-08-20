@@ -157,6 +157,7 @@ MonoBehaviour:
   sfx: {fileID: 7711868977812685078}
   sfx2: {fileID: 5607318229286293840}
   volume: {fileID: 11400000, guid: d37ff1eba90b99c4db73c49f3b044734, type: 2}
+  animator: {fileID: 0}
 --- !u!114 &4843965121570511380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: {fileID: 6957944002778214308, guid: 30cf83434d3cc3e46b679630ce94cf7e, type: 3}
+  hp: {fileID: 5745849835122806265, guid: 3bf32b92ae9527d44976d907022b3581, type: 3}
   boss: 0
+  rng: 0.01
 --- !u!82 &7711868977812685078
 AudioSource:
   m_ObjectHideFlags: 0
