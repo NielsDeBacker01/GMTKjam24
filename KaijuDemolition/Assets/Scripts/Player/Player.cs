@@ -95,6 +95,11 @@ public class Player : MonoBehaviour
     {
         return playerValues.HP;
     }
+
+    public int setCurrentHP(float hp) 
+    { 
+         return (int)(playerValues.HP * (1 + hp)); 
+    }
     
     public void loseHP(int damage)
     {

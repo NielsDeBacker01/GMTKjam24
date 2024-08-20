@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class EnemyDeath : MonoBehaviour
 {
     public GameObject exp;
+    public GameObject hp;
     private Enemy enemy;
     [SerializeField] private bool boss = false;
     private AudioManager audioManager;
+    public float rng = 0.01f;
+
     void Start()
     {
         enemy = GetComponent<Enemy>();
@@ -48,6 +51,12 @@ public class EnemyDeath : MonoBehaviour
                 if (pickUpMass != null)
                 {
                     pickUpMass.Initialize(buildingSize);
+                }
+
+                float randomValue = Random.Range(0f, 1f);
+                if (randomValue <= rng)
+                {
+                    Instantiate(hp, transform.position, Quaternion.identity);
                 }
 
                 Destroy(this.gameObject);
