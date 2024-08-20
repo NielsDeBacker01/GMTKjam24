@@ -94,7 +94,12 @@ public class Player : MonoBehaviour
     
     public void loseHP(int damage)
     {
-        playerValues.HP -= damage * ( (500 - playerValues.defense) / 500);
+        int newDamage = damage * ( (500 - playerValues.defense) / 500);
+        if(newDamage < 1)
+        {
+            newDamage = 1;
+        }
+        playerValues.HP -= newDamage;
     }
 
     public void raiseDefense(int defense)
