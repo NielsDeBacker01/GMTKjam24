@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUpExp : MonoBehaviour
 {
-    public int expAmount = 10; // Hoeveel EXP de speler oppakt
+    public int expAmount = 10;
     private PlayerExp playerExp;
 
     void Start()
@@ -16,16 +16,20 @@ public class PickUpExp : MonoBehaviour
         }
     }
 
+    public void Initialize(int enemySize)
+    {
+        expAmount *= enemySize;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Controleren of de speler het object aanraakt
         if (other.CompareTag("PickUp"))
         {
             if (playerExp != null)
             {
-                playerExp.AddExperience(expAmount); // Voeg EXP toe aan de speler
+                playerExp.AddExperience(expAmount); 
             }
-            Destroy(gameObject); // Verwijder het EXP-object
+            Destroy(gameObject); 
         }
     }
 }

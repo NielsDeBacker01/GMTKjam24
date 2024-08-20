@@ -18,7 +18,6 @@ public class PickUpMass : MonoBehaviour
 
     public void Initialize(float buildingSize)
     {
-        // Scale massAmount based on the building size
         massAmount *= buildingSize;
     }
 

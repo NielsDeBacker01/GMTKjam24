@@ -38,7 +38,18 @@ public class EnemyDeath : MonoBehaviour
                     
                 }
                 audioManager.playEnemyDeathSound();
-                Instantiate(exp, new Vector3(this.gameObject.transform.localPosition.x, this.gameObject.transform.localPosition.y, this.gameObject.transform.localPosition.z), Quaternion.identity);
+
+                Renderer renderer = GetComponent<Renderer>();
+                float buildingSize = this.gameObject.transform.localScale.x * this.gameObject.transform.localScale.y;
+
+                GameObject massInstance = Instantiate(exp, transform.position, Quaternion.identity);
+
+                PickUpMass pickUpMass = massInstance.GetComponent<PickUpMass>();
+                if (pickUpMass != null)
+                {
+                    pickUpMass.Initialize(buildingSize);
+                }
+
                 Destroy(this.gameObject);
             }
         }
