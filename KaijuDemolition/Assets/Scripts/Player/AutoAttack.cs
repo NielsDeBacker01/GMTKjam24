@@ -5,7 +5,6 @@ using UnityEngine;
 public class AutoAttack : MonoBehaviour
 {
     [SerializeField] private GameObject objectToToggle;    
-    [SerializeField] private float cooldown;
     [SerializeField] Player player;
     [SerializeField] AudioSource sfx;
     [SerializeField] AudioValues volume;
@@ -24,7 +23,7 @@ public class AutoAttack : MonoBehaviour
             sfx.Play();
             yield return new WaitForSeconds(player.getBaseAttackActiveTime());
             objectToToggle.SetActive(false);
-            yield return new WaitForSeconds(cooldown);
+            yield return new WaitForSeconds(player.getAttackCooldown());
         }
     }
 }

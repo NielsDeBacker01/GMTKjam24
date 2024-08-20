@@ -6,7 +6,19 @@ public enum UpgradeType
 {
     HealthBoost,
     SpeedBoost,
-    ClawDamageBoost
+    ClawDamageBoost,
+    ClawAOE,
+    ClawSpeed,
+    AuraLevel,
+    BoulderLevel,
+    BeamLevel,
+    ArmsLevel,
+    SurvivorLevel,
+    BigLevel,
+    VampireLevel,
+    DominanceLevel,
+    SkinLevel,
+    VelociraptorLevel,
 }
 
 public class Upgrade
@@ -39,6 +51,47 @@ public class Upgrade
             case UpgradeType.ClawDamageBoost:
                 player.raiseDamage(intValue);
                 break;
+            case UpgradeType.ClawAOE:
+                player.growAoe(floatValue);
+                break;
+            case UpgradeType.ClawSpeed:
+                player.lowerAttackCooldown(floatValue);
+                break;
+            case UpgradeType.AuraLevel:
+                player.AuraLevel += intValue;
+                break;            
+            case UpgradeType.BoulderLevel:
+                player.BoulderLevel += intValue;
+                break;            
+            case UpgradeType.BeamLevel:
+                player.BeamLevel += intValue;
+                break;            
+            case UpgradeType.ArmsLevel:
+                player.ArmsLevel += intValue;
+                break;            
+            case UpgradeType.SurvivorLevel:
+                player.SurvivorLevel += intValue;
+                break;            
+            case UpgradeType.BigLevel:
+                player.BigLevel += intValue;
+                break;            
+            case UpgradeType.VampireLevel:
+                player.VampireLevel += intValue;
+                break;            
+            case UpgradeType.DominanceLevel:
+                player.DominanceLevel += intValue;
+                break;            
+            case UpgradeType.SkinLevel:
+                player.SkinLevel += intValue;
+                player.raiseDefense(50);
+                player.lowerSpeedMult();
+                break;            
+            case UpgradeType.VelociraptorLevel:
+                player.VelociraptorLevel += intValue;
+                player.raiseSpeedMult(0.5f);
+                player.lowerAttackCooldown(0.5f);
+                player.lowerAttack(100);
+                break;   
         }
     }
 }

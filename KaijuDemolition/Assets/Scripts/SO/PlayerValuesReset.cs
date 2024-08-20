@@ -16,6 +16,18 @@ public class PlayerValuesReset : MonoBehaviour
         playerValues.maxExp = 100;
         playerValues.currentExp = 0;
         playerValues.level = 1;
+        playerValues.auraLevel = 0;
+        playerValues.boulderLevel = 0;
+        playerValues.beamLevel = 0;
+        playerValues.armsLevel = 0;
+        playerValues.survivorLevel = 0;
+        playerValues.bigLevel = 0;
+        playerValues.vampireLevel = 0;
+        playerValues.dominanceLevel = 0;
+        playerValues.skinLevel = 0;
+        playerValues.velociraptorLevel = 0;
+        playerValues.attackCooldownMult = 1;
+        playerValues.defense = 0;
     }
 
     public void Start()
