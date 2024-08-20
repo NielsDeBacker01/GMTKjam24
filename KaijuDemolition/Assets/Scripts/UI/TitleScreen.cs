@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class TitleScreen : MonoBehaviour
 {
     public GameObject optionsScreen;
+    public GameObject tutorialScreen;
 
     public void Start()
     {
         optionsScreen.SetActive(false);
+        tutorialScreen.SetActive(false);
     }
 
     public void Load()
@@ -25,6 +27,16 @@ public class TitleScreen : MonoBehaviour
     public void ExitOptions()
     {
         optionsScreen.SetActive(false);
+    }
+
+    public void OpenTuto()
+    {
+        tutorialScreen.SetActive(true);
+    }
+
+    public void ExitTuto()
+    {
+        tutorialScreen.SetActive(false);
     }
 
     public void Quit()

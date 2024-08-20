@@ -19,6 +19,7 @@ public class UIControls: MonoBehaviour
     public GameObject optionsScreen;
     public GameObject gameOverScreen;
     public GameObject victoryScreen;
+    public GameObject tutorialScreen;
     public BarSlider slider;
     [SerializeField] private AudioManager audioManager;
     public void Start()
@@ -28,6 +29,7 @@ public class UIControls: MonoBehaviour
         pauseScreen.SetActive(false);
         optionsScreen.SetActive(false);
         victoryScreen.SetActive(false);
+        tutorialScreen.SetActive(false);
         player = GameObject.FindGameObjectWithTag("PlayerCore").GetComponent<Player>();
         //menuActive = false;
     }
@@ -118,6 +120,7 @@ public class UIControls: MonoBehaviour
     {
         Time.timeScale = 1;
         ExitOptions();
+        ExitTuto();
         pauseScreen.SetActive(false);
     }
 
@@ -145,25 +148,25 @@ public class UIControls: MonoBehaviour
         }
     }    
 
-    void GameOver()
+    public void GameOver()
     {
         Time.timeScale = 0;
         gameOverScreen.SetActive(true);
     }
 
-    void Continue()
+    public void Continue()
     {
         Time.timeScale = 1;
         gameOverScreen.SetActive(false);
     }
 
-    void OpenOptions()
-    {
-        optionsScreen.SetActive(true);
-    }
-
-    void ExitOptions()
+    public void ExitOptions()
     {
         optionsScreen.SetActive(false);
+    }
+    
+    public void ExitTuto()
+    {
+        tutorialScreen.SetActive(false);
     }
 }
