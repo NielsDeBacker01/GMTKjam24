@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioSource sfx2;
     [SerializeField] AudioValues volume;
     [SerializeField] Animator animator;
-    private float hitCooldown;
 
     private void Start()
     {
@@ -55,12 +54,6 @@ public class Enemy : MonoBehaviour
             {
                 sprite.flipX = true;
             }
-        }
-
-        hitCooldown -= Time.deltaTime;
-        if(hitCooldown <= 0)
-        {
-            animator.SetBool("hit", false);
         }
     }
 
@@ -105,16 +98,12 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.CompareTag("Player") && playerCooldown <= 0)
         {
             player.loseHP(damage);
-            PlayAnimation();
+
+            animator.SetTrigger("hit");
+
             sfx2.volume = volume.sfx;
             sfx2.Play();
             playerCooldown = player.getInvincibilityCooldown();
         }
-    }
-
-    void PlayAnimation()
-    {
-        hitCooldown = 500;
-        animator.SetBool("hit", true);            
     }
 }
