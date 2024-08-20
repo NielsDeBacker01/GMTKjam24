@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Audio
   m_EditorClassIdentifier: 
   music: 0.25
-  sfx: 0.5
+  sfx: 0.4

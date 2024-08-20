@@ -144,11 +144,11 @@ public class UpgradeManager : MonoBehaviour
                 switch(player.VampireLevel)
                 {
                     case 0:
-                        return new Upgrade("Vampirism Lvl1", "5% change to heal 1% of max HP when hitting enemy", UpgradeType.VampireLevel, intValue: 1);
+                        return new Upgrade("Vampirism Lvl1", "5% chanche to heal 1% of max HP when hitting enemy", UpgradeType.VampireLevel, intValue: 1);
                     case 1:
-                        return new Upgrade("Vampirism Lvl2", "Raise change to heal 1% of max HP when hitting enemy by 5%", UpgradeType.VampireLevel, intValue: 1);
+                        return new Upgrade("Vampirism Lvl2", "Raise chanche to heal 1% of max HP when hitting enemy by 5%", UpgradeType.VampireLevel, intValue: 1);
                     case 2:
-                        return new Upgrade("Vampirism LvlMAX", "Raise change to heal 1% of max HP when hitting enemy by 5%", UpgradeType.VampireLevel, intValue: 1);
+                        return new Upgrade("Vampirism LvlMAX", "Raise chanche to heal 1% of max HP when hitting enemy by 5%", UpgradeType.VampireLevel, intValue: 1);
                     case 3:
                         return InvalidItem();
                 }
