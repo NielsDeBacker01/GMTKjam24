@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CityCenter Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7621183995246052509, guid: 07e97632a26e6e04aabc15c728428174, type: 3}
+      propertyPath: baseMaxHP
+      value: 1200
+      objectReference: {fileID: 0}
     - target: {fileID: 8739675558088742833, guid: 07e97632a26e6e04aabc15c728428174, type: 3}
       propertyPath: m_RootOrder
       value: 0

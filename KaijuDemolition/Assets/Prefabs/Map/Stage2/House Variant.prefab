@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 723803353526752931, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
+      propertyPath: baseMaxHP
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1909814014187226511, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -53,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3856499787561714553, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
       propertyPath: m_Name
-      value: House
+      value: House Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7937866928132902180, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
       propertyPath: m_Size.x

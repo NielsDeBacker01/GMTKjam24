@@ -15,13 +15,17 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.0021205992
       objectReference: {fileID: 0}
+    - target: {fileID: 723803353526752931, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
+      propertyPath: baseMaxHP
+      value: 8000
+      objectReference: {fileID: 0}
     - target: {fileID: 1909814014187226511, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1909814014187226511, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1909814014187226511, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
       propertyPath: m_LocalScale.y
@@ -117,22 +121,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3856499787561714553, guid: 7f29c2636fe0cd049a379c21b8c46d2f, type: 3}
   m_PrefabInstance: {fileID: 3533118301335393595}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &1147873452246944186
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327956280976823874}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.018906688}
-  serializedVersion: 2
-  m_Radius: 0.38445896
 --- !u!58 &398162167117935493
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +137,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.018906737}
   serializedVersion: 2
   m_Radius: 0.38866043
+--- !u!58 &1147873452246944186
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327956280976823874}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.018906688}
+  serializedVersion: 2
+  m_Radius: 0.38445896

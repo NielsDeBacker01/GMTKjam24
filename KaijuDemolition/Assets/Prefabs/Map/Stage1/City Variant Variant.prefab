@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1201248567110262370, guid: 3e6101cb82965874abd076b8af67a437, type: 3}
       propertyPath: m_Name
-      value: City Variant
+      value: City Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397346320263105464, guid: 3e6101cb82965874abd076b8af67a437, type: 3}
+      propertyPath: baseMaxHP
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4589096075138226324, guid: 3e6101cb82965874abd076b8af67a437, type: 3}
       propertyPath: m_RootOrder

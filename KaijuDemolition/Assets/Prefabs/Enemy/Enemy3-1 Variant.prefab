@@ -163,6 +163,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.019637108
       objectReference: {fileID: 0}
+    - target: {fileID: 4843965121570511380, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
+      propertyPath: expMult
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5657906103707825504, guid: e7469880f8fdd2d4fbd556d5439b1b54, type: 3}
       propertyPath: m_Color.b
       value: 0.8519909

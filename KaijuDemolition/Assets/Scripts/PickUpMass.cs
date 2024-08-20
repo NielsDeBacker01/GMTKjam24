@@ -20,7 +20,7 @@ public class PickUpMass : MonoBehaviour
     public void Initialize(float buildingSize)
     {
         massAmount *= buildingSize;
-        this.transform.localScale = new Vector3((float)(0.3 * Math.Pow(buildingSize,2)),(float)(0.3 * Math.Pow(buildingSize,2)),1);
+        this.transform.localScale = new Vector3((float)(0.3 * buildingSize),(float)(0.3 * buildingSize),1);
     }
 
     void OnTriggerEnter2D(Collider2D other)

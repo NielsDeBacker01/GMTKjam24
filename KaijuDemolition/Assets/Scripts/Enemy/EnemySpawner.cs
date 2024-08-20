@@ -20,9 +20,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float radius = 5f;
     [SerializeField] private float cooldown = 1.5f;
     [SerializeField] private Transform player;
-    private float timerValue = 0;
+    public float timerValue = 0;
     private float scale1Stop = 0;
     private float scale2Stop = 0;
+    private float scale3Stop = 0;
     private bool bossSpawned;
 
     private void Start()
@@ -35,14 +36,17 @@ public class EnemySpawner : MonoBehaviour
             case "Stage1City":
                 scale1Stop = 10;
                 scale2Stop = 20;
+                scale3Stop = 20;
                 break;
             case "Stage2World":
                 scale1Stop = 10;
                 scale2Stop = 24;
+                scale3Stop = 13;
                 break;       
             case "Stage3Space":
                 scale1Stop = 8;
                 scale2Stop = 20;
+                scale3Stop = 20;
                 break;
         }
 
@@ -68,8 +72,15 @@ public class EnemySpawner : MonoBehaviour
                 }
             }
 
-            if(timerValue > 50 && 120 > timerValue)
+            if((timerValue > 50 && 120 > timerValue) || player.lossyScale.x > scale1Stop / 2)
             {
+                if(timerValue < 50)
+                {
+                    for (int i = 0; i < 4; i++)
+                    {
+                    spawnEnemy(2);
+                    }
+                }
                 for (int i = (int)Math.Ceiling((timerValue-50)/10); i > 0; i--)
                 {
                     spawnEnemy(2);
@@ -82,9 +93,23 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy(2);
                 }
             }
-
-            if(timerValue > 100 && 180 > timerValue)
+            else if (timerValue > 4000)
             {
+                for (int i = 0; i < 10; i++)
+                {
+                    spawnEnemy(3);
+                }
+            }
+
+            if((timerValue > 100 && 180 > timerValue) || player.lossyScale.x > scale2Stop / 2)
+            {
+                if(timerValue < 100)
+                {
+                    for (int i = 0; i < 4; i++)
+                    {
+                    spawnEnemy(3);
+                    }
+                }
                 for (int i = (int)Math.Ceiling((timerValue-50)/10); i > 0; i--)
                 {
                     spawnEnemy(3);
@@ -97,10 +122,22 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy(3);
                 }
             }
+            else if (timerValue > 4000)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    spawnEnemy(3);
+                }
+            }
             
-            if(player.lossyScale.x > scale2Stop)
+            if(player.lossyScale.x > scale3Stop || timerValue>1000)
             {
                 if(!bossSpawned)
+                {
+                    spawnBoss();
+                    bossSpawned = true;
+                }
+                if(timerValue>4100)
                 {
                     spawnBoss();
                     bossSpawned = true;

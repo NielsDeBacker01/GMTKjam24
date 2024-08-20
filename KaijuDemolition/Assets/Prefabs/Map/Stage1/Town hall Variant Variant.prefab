@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5778648753063777678, guid: 8b856eba52ef86a45a08073e7af9fb26, type: 3}
       propertyPath: m_Name
-      value: Town hall Variant
+      value: Town hall Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052329634786721876, guid: 8b856eba52ef86a45a08073e7af9fb26, type: 3}
+      propertyPath: baseMaxHP
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 9166494065323398008, guid: 8b856eba52ef86a45a08073e7af9fb26, type: 3}
       propertyPath: m_RootOrder

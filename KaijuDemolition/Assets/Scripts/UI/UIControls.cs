@@ -19,6 +19,7 @@ public class UIControls: MonoBehaviour
     public GameObject optionsScreen;
     public GameObject gameOverScreen;
     public GameObject victoryScreen;
+    public EnemySpawner espawn;
     public BarSlider slider;
     [SerializeField] private AudioManager audioManager;
     public void Start()
@@ -152,6 +153,7 @@ public class UIControls: MonoBehaviour
     public void Continue()
     {
         Time.timeScale = 1;
+        espawn.timerValue = 4000;
         gameOverScreen.SetActive(false);
     }
 
